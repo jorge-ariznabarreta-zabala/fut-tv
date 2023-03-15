@@ -1,0 +1,5 @@
+npm init vue@latest
+cd fut-tv
+npm i
+npm run format
+npm run dev

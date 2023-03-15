@@ -1,0 +1,11 @@
+33d123ee182c566f7135cfb2004e8bc7
+
+https://api.besoccer.com/es/documentacion/league_status
+https://api.besoccer.com/es/documentacion/live_matches
+https://api.besoccer.com/es/documentacion/matchs
+https://api.besoccer.com/es/documentacion/tv_matches
+https://api.besoccer.com/es/documentacion/tables
+https://api.besoccer.com/es/documentacion/teams
+https://api.besoccer.com/es/documentacion/team_players
+https://api.besoccer.com/es/documentacion/categories
+https://api.besoccer.com/es/documentacion/league_status
