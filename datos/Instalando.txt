@@ -5,3 +5,5 @@ npm run format
 npm run dev
 
 npm install --save axios vue-axios //instala axios y vue-axios para hacer import
+
+npm install jest @types/jest vue-jest@next @vue/test-utils@next --save-dev //instala jest y compañia
