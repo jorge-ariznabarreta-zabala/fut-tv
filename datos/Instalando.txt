@@ -3,3 +3,5 @@ cd fut-tv
 npm i
 npm run format
 npm run dev
+
+npm install --save axios vue-axios //instala axios y vue-axios para hacer import
