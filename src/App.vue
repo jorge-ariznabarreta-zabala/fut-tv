@@ -1,16 +1,15 @@
 <script setup>
-import { RouterView } from 'vue-router';
-import  axios  from "axios";
-import headerComp from "./components/HeaderComp.vue";
-import footerComp from "./components/FooterComp.vue";
-import { ref } from "vue"
+import { RouterView } from 'vue-router'
 import NavBar from './components/NavbarComponent.vue'
+import Footer from './components/FooterComponent.vue'
+
+
 
 </script>
 
 <template>
-  <headerComp />
-    <NavBar />  
+
+    <NavBar />
   <RouterView />
-  <footerComp />
+    <Footer />
 </template>

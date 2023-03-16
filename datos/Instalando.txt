@@ -4,6 +4,27 @@ npm i
 npm run format
 npm run dev
 
-npm install --save axios vue-axios //instala axios y vue-axios para hacer import
 
-npm install jest @types/jest vue-jest@next @vue/test-utils@next --save-dev //instala jest y compañia
+instalar bootstrap
+
+npm i --save bootstrap @popperjs/core
+
+luego  en assets crear una carpeta scss y crear un archivo style.scss
+
+importar el scss de bootstrap en el archivo style.scss
+
+@import "~bootstrap/scss/bootstrap";
+
+luego importar todas las funciones de js de bootstrap
+
+import * as bootstrap from 'bootstrap' 
+
+
+descargar la extencion de live sass compiler para facilitar el compilamiento del archivo sass al crear
+el style.scss y al hacer click en la extencios de wath sass te creara este archivo
+
+import './assets/scss/style.css'
+
+este archivo importarlo en el main js junto al bootstrap
+
+
