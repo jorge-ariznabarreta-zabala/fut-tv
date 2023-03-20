@@ -14,19 +14,11 @@
   
 </template>
 
-
-
-
-<script>
-</script> 
-
-
-
+<script></script>
 
 <style scoped> 
  .redes-container{
   height: 50px;
   padding: 0.4rem;
-}  
-
+}
 </style>
