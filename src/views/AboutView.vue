@@ -1,5 +1,14 @@
-<script setup></script>
+<script setup>
+import { RouterView } from 'vue-router';
+import TitlePages from '../components/TitlePages.vue';
+</script>
 
-<template></template>
+<template>
+<div>
+    <TitlePages title="Sobre Nosotros" />
+</div>
+</template>
 
-<style></style>
+<style>
+
+</style>
