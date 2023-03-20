@@ -29,9 +29,8 @@ const router = createRouter({
       name: 'Pdivision',
       component: () => import('../views/PdivisionView.vue')
     }
-   
-     // component: () => import('../views/AboutView.vue')
-    
+
+    // component: () => import('../views/AboutView.vue')
   ]
 })
 
