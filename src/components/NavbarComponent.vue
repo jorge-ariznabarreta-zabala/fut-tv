@@ -3,8 +3,8 @@
 
 <template>
   <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
+    <div class="container-fluid contenedor">
+      <a class="navbar-brand" href="#"><img src="../assets/image_1-removebg-preview.png" alt=""></a>
       <button
         class="navbar-toggler"
         type="button"
@@ -52,9 +52,7 @@
         </ul>
       </div>
     </div>
-<<<<<<< HEAD
-  </div>
-</nav>
+  </nav>
 </template>
 
 <style scoped>
@@ -62,7 +60,3 @@ nav {
   background-color: #ACD6D4;
 }
 </style>
-=======
-  </nav>
-</template>
->>>>>>> 65982879318aa6b92019039fdc851f1871001f57
