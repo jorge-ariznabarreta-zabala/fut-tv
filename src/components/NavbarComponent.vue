@@ -40,3 +40,9 @@ import { RouterLink } from 'vue-router';
   </div>
 </nav>
 </template>
+
+<style scoped>
+nav {
+  background-color: #ACD6D4;
+}
+</style>
