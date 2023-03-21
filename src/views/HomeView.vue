@@ -1,7 +1,5 @@
 <script setup>
-import { PATTERNLIKE_TYPES } from '@babel/types';
 import axios from 'axios'
-import path from 'path';
 import { ref } from 'vue'
 
 let callApiSoccer = {
@@ -27,7 +25,7 @@ getData()
 <template>
   <div>
     <ul>
-      <li v-for="equipos in equiposLiga" key="index"> {{ equipos.Tnm }} --- {{ equipos.ptsn }}</li>
+      <li v-for="equipos in equiposLiga" :key="equipos"><img :src="`https://lsm-static-prod.livescore.com/medium/${equipos.Img}`" >{{ equipos.Tnm }} --- {{ equipos.ptsn }}</li>
     </ul>
   </div>
 </template>
