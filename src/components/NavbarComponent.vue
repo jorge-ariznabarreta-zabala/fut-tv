@@ -4,7 +4,7 @@
 <template>
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid contenedor">
-      <a class="navbar-brand" href="#"><img src="../assets/image_1-removebg-preview_1_50.png" alt=""></a>
+      <a class="navbar-brand" href="#"><img src="../assets/image/image_1-removebg-preview_1_50.png" alt=""></a>
       <button
         class="navbar-toggler"
         type="button"
@@ -16,8 +16,8 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <div class ="collapse navbar-collapse " id="navbarSupportedContent ">
+        <ul class="navbar-nav mb-2 mb-lg-0 d-flex flex-end me-5 ">
           <li class="nav-item">
             <RouterLink to="/" class="nav-link">Home</RouterLink>
           </li>
@@ -56,7 +56,11 @@
 </template>
 
 <style scoped>
-nav {
+.nav {
   background-color: #ACD6D4;
 }
+.navbar-nav{ 
+  flex-grow: 0 !important;
+}
+ 
 </style>
