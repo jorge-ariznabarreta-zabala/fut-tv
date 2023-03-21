@@ -4,11 +4,12 @@ import NavBar from './components/NavbarComponent.vue'
 import Footer from './components/FooterComponent.vue'
 
 
+
+
 </script>
 
 <template>
-
-    <NavBar />
+  <NavBar />
   <RouterView />
-    <Footer />
+  <Footer />
 </template>
