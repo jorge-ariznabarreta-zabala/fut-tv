@@ -61,7 +61,6 @@
 }
 .navbar-nav{ 
   flex-grow: 0 !important;
-  margin-right: ;
 }
  
 </style>
