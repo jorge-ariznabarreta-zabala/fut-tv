@@ -63,11 +63,13 @@ const primerLink = "https://www.livescore.com" ;
 </script>
 
 <style lang="scss" scoped>
+
 a {
     text-decoration: none;
     color: black;
 }
 li {
+   
     list-style: none;
 }
 </style>

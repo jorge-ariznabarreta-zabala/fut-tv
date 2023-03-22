@@ -1,12 +1,11 @@
 <script setup>
-
+import { RouterView } from 'vue-router';
+import TitlePages from '../components/TitlePages.vue';
+import TablaPartidos from '../components/TablaPartidos.vue';
 </script>
 
 <template>
-
-    <ul>
-      <li v-for="equipos in equiposLiga" :key="equipos"><img :src="`https://lsm-static-prod.livescore.com/medium/${equipos.Img}`" >{{ equipos.Tnm }} --- {{ equipos.ptsn }}</li>
-    </ul>
+  <TablaPartidos />
   
 
 
