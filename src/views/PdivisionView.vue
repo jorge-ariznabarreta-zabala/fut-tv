@@ -1,10 +1,18 @@
 <script setup>
+<<<<<<< HEAD
 import TitlePages from '../components/TitlePages.vue';
 
 import axios from 'axios'
 import { ref } from 'vue'
 
 let callApiSoccer = {
+=======
+    import TitlePages from '../components/TitlePages.vue';
+    import axios from 'axios'
+    import { ref } from 'vue'
+
+const callApiSoccer = {
+>>>>>>> 3bd2ec3c8ef0818e485bae294ed42ed5d4cebd40
   url: 'https://livescore6.p.rapidapi.com/leagues/v2/get-table?Category=soccer&Ccd=spain&Scd=laliga-santander',
   headers: {
     'X-RapidAPI-Key': '2354e7edb9mshf8c9fa220c15434p1804fajsn9793ea2f18a3'
@@ -22,14 +30,47 @@ const getData = async () => {
   }
 }
 getData()
+<<<<<<< HEAD
 
 </script>
 
 
+=======
+</script>
+>>>>>>> 3bd2ec3c8ef0818e485bae294ed42ed5d4cebd40
 <template>
     <div>
         <TitlePages title="Clasificaccion"/>
     </div>
+<<<<<<< HEAD
 
     
 </template>
+=======
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Clubes</th>
+                <th class="me-5">PJ</th>
+                <th>V</th>
+                <th>E</th>
+                <th>D</th>
+                <th>GF</th>
+                <th>GC</th>
+                <th>DG</th>
+                <th>PST</th>
+            </tr>
+        </thead>
+        <tbody>
+           <tr>
+            <tr v-for="equipos in equiposLiga" :key="equipos"><img :src="`https://lsm-static-prod.livescore.com/medium/${equipos.Img}`" >   <span class="ms-5 ">{{ equipos.Tnm }}</span></tr>
+           </tr>
+           
+
+           <tr></tr>
+        </tbody>
+    </table>
+</template>
+
+
+>>>>>>> 3bd2ec3c8ef0818e485bae294ed42ed5d4cebd40
