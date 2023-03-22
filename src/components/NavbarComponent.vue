@@ -56,7 +56,7 @@
 </template>
 
 <style scoped>
-.nav {
+nav {
   background-color: #ACD6D4;
 }
 .navbar-nav {
