@@ -7,7 +7,7 @@
     <div class="col-md-3">
       <div class="card-body">
         <h5 class="card-title"></h5>
-        <p class="card-text">Somos una pequeña empresa de programadores,que queremos darnos a conocer        enseñándoos, con  esta pagina web una pequeña muestra de nuestro valor</p>
+        <p class="card-text text-justify">Somos una pequeña empresa de programadores, que quiere darse a conocer con esta pagina web, dando una pequeña muestra de nuestro valor.</p>
         
       </div>
     </div>
@@ -26,7 +26,7 @@
       <p class="card-text"></p>
     </div>
     <div class="card-footer text-center">
-        <a href="" class="card-link  text-decoration-none">Github</a>
+        <a href="https://github.com/jorge-ariznabarreta-zabala" class="card-link  text-decoration-none">Github</a>
       <small class="text-muted"></small>
     </div>
   </div>
@@ -37,7 +37,7 @@
       <p class="card-text"></p>
     </div>
     <div class="card-footer text-center">
-        <a href="" class="card-link text-decoration-none ">Github</a>
+        <a href="https://github.com/Juan-Little" class="card-link text-decoration-none ">Github</a>
       <small class="text-muted"></small>
     </div>
   </div>
@@ -48,7 +48,7 @@
       <p class="card-text"></p>
     </div>
     <div class="card-footer text-center">
-        <a href="" class="card-link text-decoration-none">Github</a>
+        <a href="https://github.com/Medibra322" class="card-link text-decoration-none">Github</a>
       <small class="text-muted"></small>
     </div>
   </div>
@@ -71,7 +71,7 @@
       <p class="card-text"></p>
     </div>
     <div class="card-footer text-center">
-        <a href="" class="card-link text-decoration-none">Github</a>
+        <a href="https://github.com/mihaicce" class="card-link text-decoration-none">Github</a>
       <small class="text-muted"></small>
     </div>
   </div>
@@ -82,7 +82,7 @@
       <p class="card-text"></p>
     </div>
     <div class="card-footer text-center">
-        <a href="" class="card-link text-decoration-none">Github</a>
+        <a href="https://github.com/anyellpenascal" class="card-link text-decoration-none">Github</a>
       <small class="text-muted"></small>
     </div>
   </div>
