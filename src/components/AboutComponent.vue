@@ -1,23 +1,23 @@
 <template>
-  <div class="card mb-5 m-3 p-2" style="max-height: 600px ">
-  <div class="row g-4">
+  <div class="card mb-4 m-3 p-2" style="max-height: 600px ">
+  <div class="row g-3">
     <div class="col-md-2">
-      <img src="src/assets/football3.jpg" class="img-fluid rounded-start  " alt="...">
+      <img src="src/assets/image/football3.jpg" class="img-fluid rounded-start p-2 m-2git " alt="...">
     </div>
     <div class="col-md-3">
       <div class="card-body">
         <h5 class="card-title"></h5>
-        <p class="card-text">Somos una pequeña empresa de programadores,que queremos darnos a conocer        enseñandos,con  esta pagina web una pequeña muestra de nuestro valor</p>
-        <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+        <p class="card-text">Somos una pequeña empresa de programadores,que queremos darnos a conocer        enseñándoos, con  esta pagina web una pequeña muestra de nuestro valor</p>
+        
       </div>
     </div>
   </div>
 </div>
-   <!-- <div> -->
+   
    
    <!-- Avatares about us -->
   <!-- <div class="container-card"> -->
- <div class="card-group container-fluid flex-wrap">
+ <div class="card-group container-fluid flex-wrap mb-2">
   <div class="card border-0">
     <img src="src/assets/Avatares/Jorge.svg" 
     class="card-img-top circular--square " alt="...">
@@ -52,8 +52,8 @@
       <small class="text-muted"></small>
     </div>
   </div>
-<!-- </div>
-<div class="card-group  container-fluid border-0"> -->
+
+
   <div class="card  border-0">
     <img src="src/assets/Avatares/Jesus.svg" class="card-img-top circular--square" alt="...">
     <div class="card-body">
