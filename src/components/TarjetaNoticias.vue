@@ -1,11 +1,12 @@
 <template>
+    <div class="todo">
     <a :href="callApiNews">
     <ul>
         <li v-for="noticias in noticias" v-bind:key="noticias">
-        <div class="contenido">
-            <div class=" d-flex  flex-row align-items-center mt-5" style="width: 5rem;">
+        <div class="contenido row align-items-start">
+            <div class=" d-flex  flex-row align-items-center mt-5" style="width: 10rem;">
                 <div class="card-body">
-                    <p class="" style="width: 30rem;">{{ noticias.title }}</p>
+                    <p class="" style="width: 25rem;">{{ noticias.title }}</p>
                 </div>
                 <img :src=noticias.mainMedia.gallery.url class="card-img-top" alt="...">
             </div>
@@ -13,6 +14,7 @@
         </li>
     </ul>
     </a>
+</div>
 </template>
 
 <script setup>
