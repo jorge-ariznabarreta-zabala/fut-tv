@@ -1,18 +1,10 @@
 <script setup>
-<<<<<<< HEAD
 import TitlePages from '../components/TitlePages.vue';
 
 import axios from 'axios'
 import { ref } from 'vue'
 
 let callApiSoccer = {
-=======
-    import TitlePages from '../components/TitlePages.vue';
-    import axios from 'axios'
-    import { ref } from 'vue'
-
-const callApiSoccer = {
->>>>>>> 3bd2ec3c8ef0818e485bae294ed42ed5d4cebd40
   url: 'https://livescore6.p.rapidapi.com/leagues/v2/get-table?Category=soccer&Ccd=spain&Scd=laliga-santander',
   headers: {
     'X-RapidAPI-Key': '2354e7edb9mshf8c9fa220c15434p1804fajsn9793ea2f18a3'
@@ -30,23 +22,11 @@ const getData = async () => {
   }
 }
 getData()
-<<<<<<< HEAD
-
 </script>
-
-
-=======
-</script>
->>>>>>> 3bd2ec3c8ef0818e485bae294ed42ed5d4cebd40
 <template>
     <div>
         <TitlePages title="Clasificaccion"/>
     </div>
-<<<<<<< HEAD
-
-    
-</template>
-=======
     <table class="table">
         <thead>
             <tr>
@@ -73,4 +53,3 @@ getData()
 </template>
 
 
->>>>>>> 3bd2ec3c8ef0818e485bae294ed42ed5d4cebd40
