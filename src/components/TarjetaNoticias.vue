@@ -18,8 +18,8 @@
 </template>
 
 <script setup>
- import axios from 'axios'
- import { ref } from 'vue'
+import axios from 'axios'
+import { ref } from 'vue'
  import { RouterView } from 'vue-router';
  import TitlePages from '../components/TitlePages.vue';
  import TarjetaNoticias from '../components/TarjetaNoticias.vue';
@@ -45,21 +45,21 @@ const primerLink = "https://www.livescore.com" ;
 
  let callApiNews = {
    url: 'https://livescore6.p.rapidapi.com/news/v2/list',
-   headers: {
+  headers: {
      'X-RapidAPI-Key': 'e388957e0cmshc456c83001b76b4p144d44jsn9e6c090f0124'
-   }
- }
+  }
+}
  const noticias = ref([])
 
  const getInfo = async () => {
-   try {
+  try {
      const { data } = await axios.request(callApiNews)
     console.log(data.topStories);
      noticias.value = data.topStories;
-   } catch (error) {
-     console.log(error)
-   }
- }
+  } catch (error) {
+    console.log(error)
+  }
+}
  getInfo()
 </script>
 
