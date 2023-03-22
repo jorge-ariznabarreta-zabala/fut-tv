@@ -1,9 +1,13 @@
 <script setup>
-import  TablaPartidos  from "../components/TablaPartidos.vue";
 
-import { RouterView } from 'vue-router';
 </script>
 
 <template>
-<TablaPartidos />
+
+    <ul>
+      <li v-for="equipos in equiposLiga" :key="equipos"><img :src="`https://lsm-static-prod.livescore.com/medium/${equipos.Img}`" >{{ equipos.Tnm }} --- {{ equipos.ptsn }}</li>
+    </ul>
+  
+
+
 </template>
