@@ -5,9 +5,9 @@
         <div class="contenido">
             <div class=" d-flex  flex-row align-items-center mt-5" style="width: 5rem;">
                 <div class="card-body">
-                    <p class="" style="width: 30rem;">{{ noticias.name }}</p>
+                    <p class="" style="width: 25rem;">{{ noticias.name }}</p>
                 </div>
-                <img src="../assets/Football.jpg" class="card-img-top" alt="...">
+                <img src="../assets/image/Football.jpg" class="card-img-top" alt="...">
             </div>
         </div>
         </li>
@@ -30,7 +30,7 @@ name: 'Araújo rompe la racha de Ter Stegen en el Camp Nou: ¡1.124 minutos sin 
 </script>
 
 <style lang="scss" scoped>
-a {
-    text-decoration: none;
+li {
+    list-style: none;
 }
 </style>
