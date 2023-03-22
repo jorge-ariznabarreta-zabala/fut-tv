@@ -49,6 +49,9 @@
           <li class="nav-item">
             <RouterLink to="/Contact" class="nav-link d">Contacto</RouterLink>
           </li>
+          <li class="nav-item">
+            <RouterLink to="/LogIn" class="nav-link">Log In</RouterLink>
+          </li>
         </ul>
       </div>
     </div>
