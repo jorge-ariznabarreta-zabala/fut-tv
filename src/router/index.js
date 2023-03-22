@@ -28,7 +28,14 @@ const router = createRouter({
       path: '/Pdivision',
       name: 'Pdivision',
       component: () => import('../views/PdivisionView.vue')
-    }
+    },
+    {
+      path: '/LogIn',
+      name: 'LogIn',
+      component: () => import('../views/LogIn.vue')
+    },
+    
+
 
     // component: () => import('../views/AboutView.vue')
   ]

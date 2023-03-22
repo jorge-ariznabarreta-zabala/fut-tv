@@ -1,8 +1,7 @@
 <template>
-    <div class="todo">
-    <!-- <a :href="callApiNews"> -->
+    <div class="container">
     <ul class="row">
-        <li class="col-sm-6" v-for="noticias in noticias" v-bind:key="noticias">
+        <li class="col-sm-6 col-sm-2" v-for="noticias in noticias" v-bind:key="noticias">
         <div class="contenido">
             <div class=" d-flex  align-items-center mt-5" style="width: 10rem;">
                 <div class="card-body">
