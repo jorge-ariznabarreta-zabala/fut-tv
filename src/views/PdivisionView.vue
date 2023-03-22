@@ -1,5 +1,5 @@
 <script setup>
-import TitlePages from '../components/TitlePages.vue';
+import TitlePages from '../components/TitlePages.vue'
 
 import axios from 'axios'
 import { ref } from 'vue'
@@ -24,32 +24,37 @@ const getData = async () => {
 getData()
 </script>
 <template>
-    <div>
-        <TitlePages title="Clasificaccion"/>
-    </div>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Clubes</th>
-                <th class="me-5">PJ</th>
-                <th>V</th>
-                <th>E</th>
-                <th>D</th>
-                <th>GF</th>
-                <th>GC</th>
-                <th>DG</th>
-                <th>PST</th>
-            </tr>
-        </thead>
-        <tbody>
-           <tr>
-            <tr v-for="equipos in equiposLiga" :key="equipos"><img :src="`https://lsm-static-prod.livescore.com/medium/${equipos.Img}`" >   <span class="ms-5 ">{{ equipos.Tnm }}</span></tr>
-           </tr>
-           
-
-           <tr></tr>
-        </tbody>
-    </table>
+  <div class="mb-5">
+    <TitlePages title="Clasificaccion" />
+  </div>
+  
+  <table class="table table-hover ">
+  <thead>
+    <tr>
+      <th scope="col">Clubes</th>
+      <th scope="col">PJ</th>
+      <th scope="col">V</th>
+      <th scope="col">E</th>
+      <th scope="col">D</th>
+      <th scope="col">GF</th>
+      <th scope="col">GC</th>
+      <th scope="col">DG</th>
+      <th scope="col">Pts</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr v-for="equipo in equiposLiga" key="equipos.Tnm">
+      <td scope="row"> {{ equipo.rnk }} <img :src="`https://lsm-static-prod.livescore.com/medium/${equipo.Img}`" class="me-5 ms-3"> {{ equipo.Tnm }}</td>
+      <td>{{ equipo.pld }}</td>
+      <td>{{ equipo.win }}</td>
+      <td>{{ equipo.drw }}</td>
+      <td>{{ equipo.lst }}</td>
+      <td>{{ equipo.gf }}</td>
+      <td>{{ equipo.ga }}</td>
+      <td>{{ equipo.gd }}</td>
+      <td>{{ equipo.ptsn }}</td>
+    </tr>
+   
+  </tbody>
+</table>
 </template>
-
-
