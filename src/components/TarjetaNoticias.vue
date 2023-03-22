@@ -1,18 +1,21 @@
 <template>
-    <a :href="callApiNews">
+    <div class="todo">
+    <!-- <a :href="callApiNews"> -->
     <ul>
         <li v-for="noticias in noticias" v-bind:key="noticias">
-        <div class="contenido">
-            <div class=" d-flex  flex-row align-items-center mt-5" style="width: 5rem;">
+        <div class="contenido row align-items-start">
+            <div class=" d-flex  flex-row align-items-center mt-5" style="width: 15rem;">
                 <div class="card-body">
-                    <p class="" style="width: 30rem;">{{ noticias.title }}</p>
+                    <a :href=primerLink+noticias.url target="_blank" class="" style="width: 20rem;">{{ noticias.title }}</a>
+                    <p>{{ noticias.publishedAt }}</p>
                 </div>
                 <img :src=noticias.mainMedia.gallery.url class="card-img-top" alt="...">
             </div>
         </div>
         </li>
     </ul>
-    </a>
+    <!-- </a> -->
+</div>
 </template>
 
 <script setup>
@@ -39,7 +42,7 @@
 //  foto: "",
 //  name: 'Araújo rompe la racha de Ter Stegen en el Camp Nou: ¡1.124 minutos sin encajar un gol!'}]
 
-
+const primerLink = "https://www.livescore.com" ;
 
  let callApiNews = {
    url: 'https://livescore6.p.rapidapi.com/news/v2/list',
@@ -62,6 +65,10 @@
 </script>
 
 <style lang="scss" scoped>
+a {
+    text-decoration: none;
+    color: black;
+}
 li {
     list-style: none;
 }
