@@ -3,10 +3,10 @@
     <!-- <a :href="callApiNews"> -->
     <ul>
         <li v-for="noticias in noticias" v-bind:key="noticias">
-        <div class="contenido row align-items-start">
-            <div class=" d-flex  flex-row align-items-center mt-5" style="width: 15rem;">
+        <div class="contenido">
+            <div class=" d-flex  align-items-center mt-5" style="width: 10rem;">
                 <div class="card-body">
-                    <a :href=primerLink+noticias.url target="_blank" class="" style="width: 20rem;">{{ noticias.title }}</a>
+                    <a :href=primerLink+noticias.url target="_blank" class="d-flex" style="width: 25rem;">{{ noticias.title }}</a>
                     <p>{{ noticias.publishedAt }}</p>
                 </div>
                 <img :src=noticias.mainMedia.gallery.url class="card-img-top" alt="...">
