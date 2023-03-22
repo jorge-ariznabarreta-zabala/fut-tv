@@ -28,6 +28,11 @@ const router = createRouter({
       path: '/Pdivision',
       name: 'Pdivision',
       component: () => import('../views/PdivisionView.vue')
+    },
+    {
+      path: '/tablaJorge',
+      name: 'tablaJorge',
+      component: () => import('../components/TablaPartidos.vue')
     }
 
     // component: () => import('../views/AboutView.vue')
