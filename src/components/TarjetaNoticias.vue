@@ -20,7 +20,6 @@
 <script setup>
 import axios from 'axios'
 import { ref } from 'vue'
- import { RouterView } from 'vue-router';
  import TitlePages from '../components/TitlePages.vue';
  import TarjetaNoticias from '../components/TarjetaNoticias.vue';
 
