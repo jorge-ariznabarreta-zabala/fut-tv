@@ -2,7 +2,7 @@
 <div class="col-lg-8 mx-auto ">
 
 <div id="containerRegister">
-  <div class=" datospersonales bd-exampledropdown-menu mx-auto form-color col-lg-7 col-md-8" >
+  <div class=" datospersonales bd-exampledropdown-menu mx-auto form-color col-lg-7 col-md-8 m-5" >
     <form class="px-5 py-3 needs-validation "  id="formulario2">
       <h3 class="text-center pb-3">Registro</h3>
       <div class="mb-3 ">
@@ -22,8 +22,7 @@
         <input type="email" class="form-control" id="DropdownFormEmail1" disabled >
       </div>
       <div class="mb-3">
-        <label for="DropdownFormPassword1" class="form-label"></label>
-        <input type="password" class="form-control mb-5" id="DropdownFormPassword1" disabled >
+        <button>Log In</button>
       </div>
     </form>
   </div>
@@ -34,3 +33,9 @@
 <script setup>
 
 </script>
+
+<style scoped>
+#containerRegister {
+    background-color: #ACD6D4;
+}
+</style>
