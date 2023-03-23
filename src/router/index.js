@@ -35,6 +35,7 @@ const router = createRouter({
       component: () => import('../components/TablaPartidos.vue')
     }
 
+
     // component: () => import('../views/AboutView.vue')
   ]
 })
