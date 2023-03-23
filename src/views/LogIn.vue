@@ -21,8 +21,8 @@
         <label for="DropdownFormEmail1" class="form-label">Correo Electronico</label>
         <input type="email" class="form-control" id="DropdownFormEmail1" disabled >
       </div>
-      <div class="mb-3">
-        <button>Log In</button>
+      <div class="mb-3 d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-outline-primary">Log In</button>
       </div>
     </form>
   </div>
@@ -38,4 +38,5 @@
 #containerRegister {
     background-color: #ACD6D4;
 }
+
 </style>
