@@ -1,19 +1,14 @@
 <template>
-<input :value="fecha" type="date" id="datetime-local">
-
+<label>Elige fecha: <input @change=changeDate() type="date" id="datetime-local"  v-model=fecha > para mostrar partidos de ESE día</label>
+<pre>{{ fecha }}</pre>
 </template>
 
 <script setup>
-import { ref } from "vue";
-export {
+import { ref } from 'vue';
 
-
-
-  const fecha = ref('')
-  //Whatever code
-   fecha= new Date();
-  return {fecha}
-
-
-}
+        let fecha = ref(new Date().toLocaleDateString("es", "ES"))
+    console.log(fecha);
+        function changeDate() {
+          console.log(this.fecha);
+        };  
 </script>

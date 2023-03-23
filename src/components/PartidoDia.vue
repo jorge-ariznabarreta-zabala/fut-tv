@@ -1,6 +1,6 @@
 <script setup>
 import TitlePages from '../components/TitlePages.vue'
-// import Calendario from "./DateTimePicker.vue";
+import Calendario from "./DateTimePicker.vue";
 import axios from 'axios'
 import { ref } from 'vue'
 
