@@ -1,6 +1,6 @@
 <script setup>
 import TitlePages from '../components/TitlePages.vue'
-
+// import Calendario from "./DateTimePicker.vue";
 import axios from 'axios'
 import { ref } from 'vue'
 
@@ -31,7 +31,7 @@ getData()
   <div class="mb-5">
     <TitlePages title="Partidos por Día" />
   </div>
-  aqui va el selector de fecha
+  <Calendario />
   <table class="table table-info table-striped table-hover">
   <thead>
     <tr>

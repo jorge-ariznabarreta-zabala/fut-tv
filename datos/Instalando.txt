@@ -7,7 +7,7 @@ npm run dev
 
 instalar bootstrap
 
-npm i --save bootstrap @popperjs/core
+npm install vue bootstrap bootstrap-vue
 
 luego  en assets crear una carpeta scss y crear un archivo style.scss
 
@@ -15,16 +15,27 @@ importar el scss de bootstrap en el archivo style.scss
 
 @import "~bootstrap/scss/bootstrap";
 
-luego importar todas las funciones de js de bootstrap
+luego importar todas las funciones de js de bootstrap en main.js
 
+import Vue from 'vue'
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import * as bootstrap from 'bootstrap' 
 
+// Import Bootstrap and BootstrapVue CSS files (order is important)
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
-descargar la extencion de live sass compiler para facilitar el compilamiento del archivo sass al crear
-el style.scss y al hacer click en la extencios de wath sass te creara este archivo
+// Make BootstrapVue available throughout your project
+Vue.use(BootstrapVue)
+// Optionally install the BootstrapVue icon components plugin
+Vue.use(IconsPlugin)
+
+
+
+descargar la extension de live sass compiler para facilitar el compilamiento del archivo sass al crear
+el style.scss y al hacer click en la extension de wath sass te creara este archivo
+Vínculo de VS Marketplace: https://marketplace.visualstudio.com/items?itemName=glenn2223.live-sass
 
 import './assets/scss/style.css'
 
 este archivo importarlo en el main js junto al bootstrap
-
-

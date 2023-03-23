@@ -8,12 +8,10 @@
                     <a :href=primerLink+noticias.url target="_blank" class="d-flex" style="width: 20rem;">{{ noticias.title }}</a>
                     <p>{{ noticias.publishedAt }}</p>
                 </div>
-                <img :src=noticias.mainMedia.gallery.url class="card-img-top" alt="...">
-            </div>
-        </div>
-        </li>
-    </ul>
-</div>
+                </div>
+            </li>
+      </ul>
+   </div>
 </template>
 
 <script setup>
