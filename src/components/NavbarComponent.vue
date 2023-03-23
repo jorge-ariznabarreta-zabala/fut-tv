@@ -52,6 +52,9 @@
           <li class="nav-item">
             <RouterLink to="/LogIn" class="nav-link">Log In</RouterLink>
           </li>
+          <li class="nav-item">
+            <RouterLink to="/BlogView" class="nav-link">Blog</RouterLink>
+          </li>
         </ul>
       </div>
     </div>
