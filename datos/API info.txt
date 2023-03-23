@@ -1,0 +1,96 @@
+33d123ee182c566f7135cfb2004e8bc7
+
+https://api.besoccer.com/es/documentacion/league_status
+tz: indica el timezone del lugar donde se encuentra el dispositivo desde el que realiza la llamada a la petición. Por defecto, su valor es Europe/Madrid.
+
+teams: listado de identificadores de equipos. Cada identificador debe ir separado por ‘,’.
+
+country: parámetro que indica el código del país al que pertenecen las competiciones en las que se buscarán partidos en juego. Dicho código de país se rige por el estándar ISO 3166-1 y consiste en 2 caracteres que indican el nombre del país. Existen caso especiales como es el caso de las competiciones europeas para el que se emplea el código ‘ue’ o el resto de competiciones internacionales para el que se emplea ‘wo’. Para más detalle, consultar en http://es.wikipedia.org/wiki/ISO_3166-1.
+
+date: fecha para la que se buscan partidos. El formato debe ser ‘YYYY-MM-DD’.
+
+play: indica si se quieren sólo los partidos que se encuentran en juego en el momento que se realiza la petición. Si ‘country’ tiene valor, el parámetro no se tiene en consideración.
+
+site: la aplicación desde la que se realizó la petición.
+
+lang: indica el idioma en el que se visualiza el partido.
+
+v: la versión de la aplicación que realizó la petición.
+
+init: indica el índice a partir del cual se empezará a extraer los datos obtenidos. Su valor por defecto es 0.
+
+limit: indica el número máximo de resultados que se pueden devolver como respuesta de la petición. Por defecto, su valor es 40 y no puede ser nunca superior a dicho número.
+
+top: este parámetro señala que se seleccionen sólo partidos de las competiciones cuyo atributo ‘top’ vale 1.
+
+featured: indica que se ordenen los partidos por el extra_coefficient. 
+https://api.besoccer.com/es/documentacion/live_matches
+
+https://api.besoccer.com/es/documentacion/matchs
+ tz: indica el timezone del lugar donde se encuentra el dispositivo desde el que realiza la llamada a la petición. Por defecto, su valor es Europe/Madrid.
+
+order: Indica el orden en el que se devuelven los partidos. El único valor posible es ‘twin, haciendo que los partidos de eliminatorias sean devueltos por parejas (los partidos de la misma eliminatoria se devuelven uno seguido del otro).
+
+site: la aplicación desde la que se realizó la petición.
+
+v: la versión de la aplicación que realizó la petición.
+
+twolegged: indica que se devuelvan los partidos de la misma eliminatoria agrupados por emparejamiento e incluyendo un campo adicional con el resultado global de la eliminatoria.
+
+round: número de la jornada a la que pertenecen los partidos. Si no se indica valor, el parámetro valdrá, por defecto, el número de la jornada activa de la temporada indicada.
+
+league: identificador de la categoría en la que se buscan los partidos.
+
+group: este parámetro muestra el filtro de grupo que se tendrá en consideración. Sus posibles valores son: ‘all’ (todos los grupos cuyo número es mayor de 0), ‘playoff’ (selecciona los grupos cuyo valor es 0) o el número del grupo dentro de la competición.
+
+year: temporada en la que se buscan las competiciones. Si no tiene valor, éste será, por defecto, la temporada actual. 
+https://api.besoccer.com/es/documentacion/tv_matches
+tz: indica el timezone del lugar donde se encuentra el dispositivo desde el que realiza la llamada a la petición. Por defecto, su valor es Europe/Madrid.
+
+size: indica el tamaño de las imágenes.
+
+teams: listado de identificadores de equipos. Cada identificador debe ir separado por ‘,’.
+
+competitions: listado de identificadores de competiciones. Cada identificador debe ir separado por ‘,’.
+
+country: parámetro que indica el código del país al que pertenecen las competiciones en las que se buscarán partidos televisados. Dicho código de país se rige por el estándar ISO 3166-1 y consiste en 2 caracteres que indican el nombre del país. Existen caso especiales como es el caso de las competiciones europeas para el que se emplea el código ‘ue’ o el resto de competiciones internacionales para el que se emplea ‘wo’. Para más detalle, consultar en http://es.wikipedia.org/wiki/ISO_3166-1.
+
+date: fecha para la que se buscan partidos televisados. El formato debe ser ‘YYYY-MM-DD’. Si no se indica ningún valor, seleccionará los partidos televisados en los próximos 7 días.
+
+play: indica que se seleccionen sólo los partidos que se encuentren en juego.
+
+init: indica el índice a partir del cual se empezará a extraer los datos obtenidos. Su valor por defecto es 0.
+
+limit: indica el número máximo de resultados que se pueden devolver como respuesta de la petición.
+
+top: este parámetro señala que se seleccionen sólo las competiciones cuyo atributo ‘top’ vale 1. 
+https://api.besoccer.com/es/documentacion/tables
+ round: jornada para la que se quieren obtener datos. Si no tiene valor, éste valdrá, por defecto, el valor de la jornada activa de la competición.
+
+league: identificador de la categoría de la que se quiere obtener la clasificación. Si no tiene valor, no se realiza la petición.
+
+group: este parámetro muestra el filtro de grupo que se tendrá en consideración. Sus posibles valores son: ‘all’ (selecciona todos los grupos), ‘playoff’ (selecciona los grupos cuyo valor es 0) o el número del grupo dentro de la competición.
+
+year: temporada en la que se buscan la clasificación de la competición. Si no tiene valor, éste será, por defecto, la temporada actual. 
+https://api.besoccer.com/es/documentacion/teams
+ league: identificador de la competición de la que se quiere obtener el listado de equipos.
+
+group: este parámetro muestra el filtro de grupo que se tendrá en consideración. Sus posibles valores son: ‘all’ (selecciona todos los grupos cuyo número es mayor de 0), ‘playoff’ (selecciona los grupos cuyo valor es 0) o el número del grupo dentro de la competición.
+
+year: temporada de la que se quiere obtener el listado de equipos. Si no tiene valor, éste será, por defecto, la temporada actual. 
+https://api.besoccer.com/es/documentacion/team_players
+ team: identificador del equipo para una temporada y competición determinada. No confundir con el identificador de equipo general. Se pueden obtener los ids a través de la petición teams.
+
+year: temporada de la que se quiere obtener la plantilla del equipo. Si no tiene valor, éste será, por defecto, la temporada actual. 
+https://api.besoccer.com/es/documentacion/categories
+ country: parámetro que indica el código del país al que pertenecen las competiciones que se buscan. Dicho código de país se rige por el estándar ISO 3166-1 y consiste en 2 caracteres que indican el nombre del país. Existen caso especiales como es el caso de las competiciones europeas para el que se emplea el código ‘ue’ o el resto de competiciones internacionales para el que se emplea ‘wo’. Para más detalle, consultar en http://es.wikipedia.org/wiki/ISO_3166-1.
+
+extra: parámetro especial empleado para los widgets.
+
+filter: este parámetro indicará qué criterios se emplearán para realizar la selección de competiciones en la base de datos. El filtro actuará según el valor que se le indique en la entrada, siendo posibles los que se comentan a continuación: ‘all’ (todas las competiciones), ‘top’ (las que ‘top’ vale 1), ‘spain’ (se disputan en España), ‘leagues’ (se juegan fuera de España), ‘competitions’ (competiciones internacionales), o ‘country’ (disputadas donde indica el parámetro con el mismo nombre), 'my_leagues' (muestra las competiciones contratadas, máximo 50) 
+https://api.besoccer.com/es/documentacion/league_status
+ id: el identificador de la competición de la que se quiere conocer su estado.
+
+group: este parámetro muestra el filtro de grupo que se tendrá en consideración. Sus posibles valores son: ‘all’ (todos los grupos cuyo número es mayor de 0), ‘playoff’ (selecciona los grupos cuyo valor es 0) o el número del grupo dentro de la competición.
+
+year: temporada en la que se buscan las competiciones. Si no tiene valor o el valor que tiene no contiene resultados en la base de datos, el resultado devuelto estará vacío. 
