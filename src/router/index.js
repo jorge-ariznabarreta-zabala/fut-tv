@@ -30,10 +30,12 @@ const router = createRouter({
       component: () => import('../views/PdivisionView.vue')
     },
     {
-      path: '/tablaJorge',
-      name: 'tablaJorge',
-      component: () => import('../components/TablaPartidos.vue')
-    }
+      path: '/LogIn',
+      name: 'LogIn',
+      component: () => import('../views/LogIn.vue')
+    },
+    
+
 
 
     // component: () => import('../views/AboutView.vue')

@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+<<<<<<< HEAD
      <!-- <a :href="callApiNews"> -->
       <ul class="row">
           <li class="col-sm-6" v-for="noticias in noticias" v-bind:key="noticias">
@@ -10,6 +11,15 @@
                         <p>{{ noticias.publishedAt }}</p>
                     </div>
                     <img :src=noticias.mainMedia.gallery.url class="card-img-top" alt="...">
+=======
+    <ul class="row">
+        <li class="col-sm-6 col-sm-2" v-for="noticias in noticias" v-bind:key="noticias">
+        <div class="contenido">
+            <div class=" d-flex  align-items-center mt-5" style="width: 10rem;">
+                <div class="card-body">
+                    <a :href=primerLink+noticias.url target="_blank" class="d-flex" style="width: 20rem;">{{ noticias.title }}</a>
+                    <p>{{ noticias.publishedAt }}</p>
+>>>>>>> 548d90b851a1b01fff29bdcb97fbb558adbc9768
                 </div>
             </div>
           </li>
@@ -18,8 +28,8 @@
 </template>
 
 <script setup>
- import axios from 'axios'
- import { ref } from 'vue'
+import axios from 'axios'
+import { ref } from 'vue'
  import { RouterView } from 'vue-router';
  import TitlePages from '../components/TitlePages.vue';
  import TarjetaNoticias from '../components/TarjetaNoticias.vue';
@@ -45,21 +55,21 @@ const primerLink = "https://www.livescore.com" ;
 
  let callApiNews = {
    url: 'https://livescore6.p.rapidapi.com/news/v2/list',
-   headers: {
+  headers: {
      'X-RapidAPI-Key': 'e388957e0cmshc456c83001b76b4p144d44jsn9e6c090f0124'
-   }
- }
+  }
+}
  const noticias = ref([])
 
  const getInfo = async () => {
-   try {
+  try {
      const { data } = await axios.request(callApiNews)
     console.log(data.topStories);
      noticias.value = data.topStories;
-   } catch (error) {
-     console.log(error)
-   }
- }
+  } catch (error) {
+    console.log(error)
+  }
+}
  getInfo()
 </script>
 
