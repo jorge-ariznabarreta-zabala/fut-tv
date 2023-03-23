@@ -1,19 +1,20 @@
 <template>
     <div class="container">
-    <ul class="row">
-        <li class="col-sm-6 col-sm-2" v-for="noticias in noticias" v-bind:key="noticias">
-        <div class="contenido">
-            <div class=" d-flex  align-items-center mt-5" style="width: 10rem;">
-                <div class="card-body">
-                    <a :href=primerLink+noticias.url target="_blank" class="d-flex" style="width: 20rem;">{{ noticias.title }}</a>
-                    <p>{{ noticias.publishedAt }}</p>
+     <!-- <a :href="callApiNews"> -->
+      <ul class="row">
+          <li class="col-sm-6" v-for="noticias in noticias" v-bind:key="noticias">
+            <div class="contenido">
+                <div class=" d-flex  align-items-center mt-5" style="width: 10rem;">
+                    <div class="card-body">
+                        <a :href=primerLink+noticias.url target="_blank" class="d-flex" style="width: 20rem;">{{ noticias.title }}</a>
+                        <p>{{ noticias.publishedAt }}</p>
+                    </div>
+                    <img :src=noticias.mainMedia.gallery.url class="card-img-top" alt="...">
                 </div>
-                <img :src=noticias.mainMedia.gallery.url class="card-img-top" alt="...">
-            </div>
-        </div>
-        </li>
-    </ul>
-</div>
+                </div>
+            </li>
+      </ul>
+   </div>
 </template>
 
 <script setup>
