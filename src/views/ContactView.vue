@@ -116,7 +116,7 @@ function validateForm() {
           </form>
 
           <div class="text-center text-md-left mt-5">
-            <input type="submit" class="btn btn-primary" id="btn" @click="validateForm()">
+            <input type="submit" class="btn btn-outline-primary" id="btn" @click="validateForm()">
           </div>
           <div class="status"></div>
         </div>
