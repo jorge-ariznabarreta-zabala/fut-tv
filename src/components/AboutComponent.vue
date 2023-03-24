@@ -1,13 +1,13 @@
 <template>
-  <div class="card mb-4 m-3 p-2" style="max-height: 600px ">
+  <div class="card mb-4 m-3 p-2" style="max-height: 800px ">
   <div class="row g-3">
     <div class="col-md-2">
-      <img src="src/assets/image/football3.jpg" class="img-fluid rounded-start p-2 m-2git " alt="...">
+      <img src="src/assets/image/football3.jpg" class="img-fluid rounded-start p-2 mt-4git " alt="...">
     </div>
-    <div class="col-md-3">
+    <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title"></h5>
-        <p class="card-text text-justify">Somos una pequeña empresa de programadores, que quiere darse a conocer con esta pagina web, dando una pequeña muestra de nuestro valor.</p>
+        <h5 class="card-title "></h5>
+        <p class="card-text text-justify mt-4">Somos una pequeña empresa de programadores, que quiere darse a conocer con esta pagina web, dando una pequeña muestra de nuestro valor. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit, similique aut voluptas nemo est inventore. Saepe est impedit ut corporis nam ipsa optio necessitatibus, doloremque numquam in officiis, quis quos. Quisquam voluptatem cum odio incidunt in, dolores esse, libero unde tenetur excepturi consectetur necessitatibus nisi et. Dolorem soluta molestias assumenda enim error cum sed, nisi . </p>
         
       </div>
     </div>
