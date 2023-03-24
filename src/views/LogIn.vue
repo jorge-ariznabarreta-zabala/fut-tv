@@ -31,7 +31,31 @@
 </template>
 
 <script setup>
+let app = Vue.createApp({
+  data() {
+    return {
+      name: undefined,
+      apellido: undefined,
+      direccion: undefined,
+      email: undefined    
+    }
+  },
+  methods: {
+    async nuevoUsuario() {
+      const url =
+      const response = await fetch (url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'},
+          body: `{"name": ${this.name}, "apellido": ${this.apellido}, "email": ${this.direccion}, "apellido": ${this.email}}` 
+        }
+      })
+      .catch
+    }
+  }
+});
 
+app.mount("#app");
 </script>
 
 <style scoped>
