@@ -1,36 +1,7 @@
 <script setup>
 import TitlePages from '../components/TitlePages.vue'
 
-function validateForm() {
-  var name = document.getElementById('name').value
-  if (name == '') {
-    document.querySelector('.status').innerHTML = alert('Name cannot be empty')
-    return false
-  }
-  var email = document.getElementById('email').value
-  if (email == '') {
-    document.querySelector('.status').innerHTML = alert('Email cannot be empty')
-    return false
-  } else {
-    var re =
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    if (!re.test(email)) {
-      document.querySelector('.status').innerHTML = alert('Email format invalid')
-      return false
-    }
-  }
-  var subject = document.getElementById('subject').value
-  if (subject == '') {
-    document.querySelector('.status').innerHTML = alert('Subject cannot be empty')
-    return false
-  }
-  var message = document.getElementById('message').value
-  if (message == '') {
-    document.querySelector('.status').innerHTML = alert('Message cannot be empty')
-    return false
-  }
-  document.querySelector('.status').innerHTML = alert('Sending...')
-}
+
 
 
 
@@ -53,7 +24,7 @@ function validateForm() {
     </div>
 
     <div class="formulario">
-      <!--Section description-->
+    
       <p class="text-center w-responsive mx-auto mb-5">
         Do you have any questions? Please do not hesitate to contact us directly. Our team will come
         back to you within a matter of hours to help you.
@@ -116,7 +87,7 @@ function validateForm() {
           </form>
 
           <div class="text-center text-md-left mt-5">
-            <input type="submit" class="btn btn-primary" id="btn" @click="validateForm()">
+            <input type="submit" class="btn btn-outline-primary" id="btn">
           </div>
           <div class="status"></div>
         </div>

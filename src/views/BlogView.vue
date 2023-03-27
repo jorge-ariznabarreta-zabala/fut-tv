@@ -1,17 +1,38 @@
-<template>
-    <TitlePages title="Blog"/>
-    <BlogComponent />
-  
-</template>
+<script setup>
+import axios from 'axios'
+import TitlePages from '../components/TitlePages.vue'
+import { ref } from 'vue'
 
-<script setup
-  components: { BlogComponent },>
-import { RouterView } from 'vue-router';
-import BlogComponent from '../components/BlogComponent.vue';
-import TitlePages from '../components/TitlePages.vue';
+const datosPosts = ref([])
 
+var config = {
+  method: 'get',
+maxBodyLength: Infinity,
+  url: 'http://localhost:3000/posts',
+  headers: { }
+};
+
+const getData = async () => {
+  try {
+    const  response  = await axios.request(config)
+    datosPosts.value = response.data
+    console.log(response.data)
+  } catch (error) {
+    console.log(error)
+  }
+}
+getData()
 </script>
 
-<style>
+<template>
+  <TitlePages title="Blog" />
+  <div class="post container" v-for="datos in datosPosts" :key="id">
+    <div class="info m-3">{{ datos.author }}</div>
 
-</style>
+    <div class="content-post">
+      <h2 class="title mb-5"> {{ datos.title }}</h2>
+
+      <p class="text">{{ datos.content }}</p>
+    </div>
+  </div>
+</template>

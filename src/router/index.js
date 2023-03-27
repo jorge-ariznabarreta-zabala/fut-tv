@@ -38,11 +38,16 @@ const router = createRouter({
       path: '/BlogView',
       name: 'BlogView',
       component: () => import('../views/BlogView.vue')
+    },
+    {
+      path: '/intranet',
+      name: 'intranetview',
+      component: () => import('../views/IntranetView.vue')
     }
 
 
 
-    // component: () => import('../views/AboutView.vue')
+    
   ]
 })
 
