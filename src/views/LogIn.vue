@@ -29,9 +29,6 @@ function redirectToPage(){
   router.push("/");
 
   nuevoUsuario();
-  
-
-
   validateForm();
  
 }
