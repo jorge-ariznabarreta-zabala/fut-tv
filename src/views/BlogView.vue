@@ -1,17 +1,11 @@
-<template>
-    <TitlePages title="Blog"/>
-    <BlogComponent />
-  
-</template>
-
-<script setup
-  components: { BlogComponent },>
-import { RouterView } from 'vue-router';
+<script setup>
+import TitlePages from '../components/TitlePages.vue'
 import BlogComponent from '../components/BlogComponent.vue';
-import TitlePages from '../components/TitlePages.vue';
 
 </script>
 
-<style>
+<template>
+ <TitlePages title="Blog" />
+ <BlogComponent />
 
-</style>
+</template>

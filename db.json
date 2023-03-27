@@ -39,6 +39,23 @@
       "password": "qwert123.",
       "address": "bilbao",
       "id": 3
+    },
+    {
+      "name": "mohamed",
+      "lastname": "ibrahim",
+      "email": "mohamed@mohamed.com",
+      "password": "qwerty123.",
+      "address": "bilbao",
+      "id": 4
+    },
+    
+    {
+      "name": "juesus",
+      "lastname": "pinto",
+      "email": "jesus@jesus.com",
+      "password": "qwerty123",
+      "address": "bilbao",
+      "id": 6
     }
   ]
 }

@@ -21,8 +21,7 @@ const nuevoUsuario = async () => {
     })
  
   });
-  validateForm();
-  redirectToPage();
+ 
 }
 
 
@@ -30,7 +29,11 @@ function redirectToPage(){
   router.push("/");
 
   nuevoUsuario();
+  
+
+
   validateForm();
+ 
 }
 
 
