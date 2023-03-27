@@ -1,0 +1,44 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "madrid vs barcelona",
+      "author": "jesus",
+      "contenido": ""
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "commentId": 1,
+      "usuario": "pepito",
+      "body": "some comment"
+    }
+  ],
+  "usuarios": [
+    {
+      "name": "anyell",
+      "lastname": "mendoza",
+      "email": "anyell@anyell.com",
+      "password": "qwerty123",
+      "address": "lekeitio",
+      "id": 1
+    },
+    {
+      "name": "juan",
+      "lastname": "benito",
+      "email": "juan@benito.com",
+      "password": "qwert123",
+      "address": "bilbao",
+      "id": 2
+    },
+    {
+      "name": "mihai",
+      "lastname": "cocea",
+      "email": "mihai@cocea.com",
+      "password": "qwert123.",
+      "address": "bilbao",
+      "id": 3
+    }
+  ]
+}
