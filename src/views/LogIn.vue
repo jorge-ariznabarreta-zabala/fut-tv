@@ -21,8 +21,7 @@ const nuevoUsuario = async () => {
     })
  
   });
-  validateForm();
-  redirectToPage();
+ 
 }
 
 
@@ -31,6 +30,7 @@ function redirectToPage(){
 
   nuevoUsuario();
   validateForm();
+ 
 }
 
 
