@@ -69,22 +69,6 @@
       "password": "qwerty123.",
       "address": "bilbao",
       "id": 7
-    },
-    {
-      "name": "nnn",
-      "lastname": "nnn",
-      "email": "nn@nnn.com",
-      "password": "njnkjbn",
-      "address": "nnn",
-      "id": 8
-    },
-    {
-      "name": "nnn",
-      "lastname": "nnn",
-      "email": "mn@bnf.com",
-      "password": "mnjbnkj",
-      "address": "nn",
-      "id": 9
     }
   ]
 }
