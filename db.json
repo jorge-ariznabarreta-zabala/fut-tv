@@ -69,6 +69,22 @@
       "password": "qwerty123.",
       "address": "bilbao",
       "id": 7
+    },
+    {
+      "name": "jessica",
+      "lastname": "mosteiro",
+      "email": "jessica@jess.com",
+      "password": "qwerty",
+      "address": "baraka",
+      "id": 8
+    },
+    {
+      "name": "",
+      "lastname": "",
+      "email": "",
+      "password": "",
+      "address": "",
+      "id": 9
     }
   ]
 }
