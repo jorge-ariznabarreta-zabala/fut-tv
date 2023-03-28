@@ -98,6 +98,8 @@ function validateForm() {
       </div>
     </form>
   </div>
+</div>
+</div>
 </template>
 
 <style scoped>
