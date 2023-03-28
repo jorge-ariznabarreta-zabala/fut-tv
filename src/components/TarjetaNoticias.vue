@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <ul class="row">
-            <li class="col-lg-6 justify-content-center" v-for="noticias in noticias" v-bind:key="noticias">
+            <li class="col-12 col-lg-6 justify-content-center" v-for="noticias in noticias" v-bind:key="noticias">
                 <div class="contenido">
                     <div class=" d-flex  align-items-center mt-5" style="width: 10rem;">
                         <div class="card-body">
