@@ -14,7 +14,7 @@ import { ref } from 'vue'
 
 const nuevoUsuario = async () => {
   const url = 'http://localhost:3000/usuarios'
-  const response = await fetch(url, {
+   await fetch(url, {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
     body: JSON.stringify({
