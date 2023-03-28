@@ -27,34 +27,34 @@ getData()
   <div class="mb-5">
     <TitlePages title="Clasificaccion" />
   </div>
-  
+
   <table class="table table-hover ">
-  <thead>
-    <tr>
-      <th scope="col">Clubes</th>
-      <th scope="col">PJ</th>
-      <th scope="col">V</th>
-      <th scope="col">E</th>
-      <th scope="col">D</th>
-      <th scope="col">GF</th>
-      <th scope="col">GC</th>
-      <th scope="col">DG</th>
-      <th scope="col">Pts</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr v-for="equipo in equiposLiga" key="equipos.Tnm">
+    <thead>
+      <tr>
+        <th scope="col">Clubes</th>
+        <th scope="col">PJ</th>
+        <th scope="col">V</th>
+        <th scope="col">E</th>
+        <th scope="col">D</th>
+        <th scope="col">GF</th>
+        <th scope="col">GC</th>
+        <th scope="col">DG</th>
+        <th scope="col">Pts</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="equipo in equiposLiga" key="equipos.Tnm">
       <td scope="row"> {{ equipo.rnk }} <img :src="`https://lsm-static-prod.livescore.com/medium/${equipo.Img}`" class="me-5 ms-3"> {{ equipo.Tnm }}</td>
-      <td>{{ equipo.pld }}</td>
-      <td>{{ equipo.win }}</td>
-      <td>{{ equipo.drw }}</td>
-      <td>{{ equipo.lst }}</td>
-      <td>{{ equipo.gf }}</td>
-      <td>{{ equipo.ga }}</td>
-      <td>{{ equipo.gd }}</td>
-      <td>{{ equipo.ptsn }}</td>
-    </tr>
+        <td>{{ equipo.pld }}</td>
+        <td>{{ equipo.win }}</td>
+        <td>{{ equipo.drw }}</td>
+        <td>{{ equipo.lst }}</td>
+        <td>{{ equipo.gf }}</td>
+        <td>{{ equipo.ga }}</td>
+        <td>{{ equipo.gd }}</td>
+        <td>{{ equipo.ptsn }}</td>
+      </tr>
    
-  </tbody>
-</table>
+    </tbody>
+  </table>
 </template>

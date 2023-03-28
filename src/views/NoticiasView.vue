@@ -1,9 +1,9 @@
 <template>
-    <div>
+  <div>
         <TitlePages title='Noticias'/>
         <TarjetaNoticias noticias=""/>
-        <tarjetaCarousel />
-    </div>
+    <tarjetaCarousel />
+  </div>
    
 </template>
 

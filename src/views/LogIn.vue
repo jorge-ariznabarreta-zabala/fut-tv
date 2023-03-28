@@ -30,7 +30,7 @@ function redirectToPage(){
 
   nuevoUsuario();
   validateForm();
- 
+
 }
 
 
@@ -69,37 +69,37 @@ function validateForm() {
 <template>
 <div class="col-lg-8 mx-auto ">
 
-<div id="containerRegister">
+    <div id="containerRegister">
   <div class=" datospersonales bd-exampledropdown-menu mx-auto form-color col-lg-7 col-md-8 m-5" >
     <form class="px-5 py-3 needs-validation "  id="formulario2">
-      <h3 class="text-center pb-3">Registro</h3>
+          <h3 class="text-center pb-3">Registro</h3>
       <div class="mb-3 ">
-          <label for="DropdownFormName1" class="form-label">Nombre</label>
+            <label for="DropdownFormName1" class="form-label">Nombre</label>
           <input type="text" class="form-control" id="name" v-model="name">
-      </div>
-      <div class="mb-3">
-          <label for="DropdownFormlastname" class="form-label">Apellido</label>
+          </div>
+          <div class="mb-3">
+            <label for="DropdownFormlastname" class="form-label">Apellido</label>
           <input type="text" class="form-control" id="lastname" v-model="apellido">
-      </div>
-      <div class="mb-3">
-          <label for="DropdownFormdirection" class="form-label">Direccion</label>
+          </div>
+          <div class="mb-3">
+            <label for="DropdownFormdirection" class="form-label">Direccion</label>
           <input type="text" class="form-control" id="address" v-model="direccion">
-      </div>
-      <div class="mb-3">
-        <label for="DropdownFormEmail1" class="form-label">Correo Electronico</label>
+          </div>
+          <div class="mb-3">
+            <label for="DropdownFormEmail1" class="form-label">Correo Electronico</label>
         <input type="email" class="form-control" id="email" v-model="email">
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Contraseña</label>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Contraseña</label>
         <input type="email" class="form-control" id="password" v-model="password">
+          </div>
+          <div class="mb-3 d-grid gap-2 col-6 mx-auto">
+            <button class="btn btn-outline-primary" @click="redirectToPage()">Registrate</button>
+          </div>
+        </form>
       </div>
-      <div class="mb-3 d-grid gap-2 col-6 mx-auto">
-        <button class="btn btn-outline-primary" @click="redirectToPage()">Registrate</button>
-      </div>
-    </form>
+    </div>
   </div>
-</div>
-</div>
 </template>
 
 

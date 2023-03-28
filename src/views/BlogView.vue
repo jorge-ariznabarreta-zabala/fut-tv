@@ -7,7 +7,7 @@ const datosPosts = ref([])
 
 var config = {
   method: 'get',
-maxBodyLength: Infinity,
+  maxBodyLength: Infinity,
   url: 'http://localhost:3000/posts',
   headers: { }
 };
