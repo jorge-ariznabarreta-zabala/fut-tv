@@ -92,13 +92,15 @@
       </div>
     </div>
     <div class="card border-0">
-    <img src="src/assets/Avatares/Anyell.svg" class="card-img-top circular--square" alt="...">
+      <img src="src/assets/Avatares/Anyell.svg" class="card-img-top circular--square" alt="..." />
       <div class="card-body">
         <h5 class="card-title text-center">Anyell</h5>
         <p class="card-text"></p>
       </div>
       <div class="card-footer text-center">
-        <a href="https://github.com/anyellpenascal" class="card-link text-decoration-none">Github</a>
+        <a href="https://github.com/anyellpenascal" class="card-link text-decoration-none"
+          >Github</a
+        >
         <small class="text-muted"></small>
       </div>
     </div>
@@ -109,11 +111,11 @@
 <script setup></script>
 
 <style lang="scss" scoped>
-.card{
-  background-color: #ACD6D4;
+.card {
+  background-color: #acd6d4;
 }
-.card-img-top{
-   background-blend-mode : 20px;
+.card-img-top {
+  background-blend-mode: 20px;
 }
 .circular--square {
   border-top-left-radius: 50% 50%;
@@ -126,26 +128,23 @@
 //   margin-right: 10rem;
 //   margin-top: 1rem;
 // }
-img{
+img {
   // width: 10rem;
   // height: 10rem;
   justify-content: center;
   padding: 1rem;
-
 }
-.a{
+.a {
   text-decoration-color: none;
-  color: #3A5E65;
+  color: #3a5e65;
 }
-.balon{
+.balon {
   width: 30rem;
   margin-bottom: 5rem;
 }
-.football{
-  box-shadow: #ACD6D4;
+.football {
+  box-shadow: #acd6d4;
   width: 2000px;
   height: 10rem;
 }
-
-
 </style>

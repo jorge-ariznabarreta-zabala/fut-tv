@@ -44,10 +44,6 @@ const router = createRouter({
       name: 'intranetview',
       component: () => import('../views/IntranetView.vue')
     }
-
-
-
-    
   ]
 })
 
