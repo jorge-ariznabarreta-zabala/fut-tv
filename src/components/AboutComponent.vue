@@ -61,7 +61,7 @@
         alt="..."
       />
       <div class="card-body">
-        <h5 class="card-title text-center">Mohammed</h5>
+        <h5 class="card-title text-center">{{ props.title }}</h5>
         <p class="card-text"></p>
       </div>
       <div class="card-footer text-center">
@@ -109,6 +109,13 @@
 </template>
 
 <script setup>
+import { reactive } from "vue";
+const props = defineProps({
+  title: {
+    type: String,
+    default: "Mohamed",
+  },
+});
 </script>
 
 <style lang="scss" scoped>
