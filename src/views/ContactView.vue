@@ -1,10 +1,5 @@
 <script setup>
 import TitlePages from '../components/TitlePages.vue'
-
-
-
-
-
 </script>
 
 <template>
@@ -24,7 +19,6 @@ import TitlePages from '../components/TitlePages.vue'
     </div>
 
     <div class="formulario">
-    
       <p class="text-center w-responsive mx-auto mb-5">
         Do you have any questions? Please do not hesitate to contact us directly. Our team will come
         back to you within a matter of hours to help you.
@@ -87,7 +81,7 @@ import TitlePages from '../components/TitlePages.vue'
           </form>
 
           <div class="text-center text-md-left mt-5">
-            <input type="submit" class="btn btn-outline-primary" id="btn">
+            <input type="submit" class="btn btn-outline-primary" id="btn" />
           </div>
           <div class="status"></div>
         </div>
