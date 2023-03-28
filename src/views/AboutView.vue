@@ -1,18 +1,14 @@
 <script setup>
-import { RouterView } from 'vue-router';
-import TitlePages from '../components/TitlePages.vue';
-import AboutComponent from '../components/AboutComponent.vue';
+import { RouterView } from 'vue-router'
+import TitlePages from '../components/TitlePages.vue'
+import AboutComponent from '../components/AboutComponent.vue'
 </script>
 
 <template>
-<div>
+  <div>
     <TitlePages title="Sobre Nosotros" />
-    <AboutComponent/>
-    
-</div>
-
+    <AboutComponent />
+  </div>
 </template>
 
-<style>
-
-</style>
+<style></style>

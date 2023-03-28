@@ -13,11 +13,10 @@ import { ref } from 'vue'
 
 
 const nuevoUsuario = async () => {
-  const url = "http://localhost:3000/usuarios";
-  const response = await fetch(url,
-  {
+  const url = 'http://localhost:3000/usuarios'
+  const response = await fetch(url, {
     method: 'POST',
-    headers: {'content-type': 'application/json'},
+    headers: { 'content-type': 'application/json' },
     body: JSON.stringify({
       name: nombre.value,
       lastname: apellido.value,
@@ -25,20 +24,15 @@ const nuevoUsuario = async () => {
       password: contraseña.value,
       address: direccion.value
     })
- 
-  });
- 
+  })
 }
 
+function redirectToPage() {
+  router.push('/')
 
-function redirectToPage(){
-  router.push("/");
-
-  nuevoUsuario();
-  validateForm();
- 
+  nuevoUsuario()
+  validateForm()
 }
-
 
 function validateForm() {
   var name = document.getElementById('name').value
@@ -104,14 +98,10 @@ function validateForm() {
       </div>
     </form>
   </div>
-</div>
-</div>
 </template>
-
 
 <style scoped>
 #containerRegister {
-    background-color: #ACD6D4;
+  background-color: #acd6d4;
 }
-
 </style>
