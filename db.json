@@ -85,6 +85,14 @@
       "password": "mnjbnkj",
       "address": "nn",
       "id": 9
+    },
+    {
+      "name": "MIhai",
+      "lastname": "Cocea",
+      "email": "cocea.mike@gmail.com",
+      "password": "blablabla",
+      "address": "iasi",
+      "id": 10
     }
   ],
   "username": [
