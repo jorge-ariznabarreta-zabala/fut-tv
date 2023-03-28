@@ -7,14 +7,14 @@ const datosPosts = ref([])
 
 var config = {
   method: 'get',
-maxBodyLength: Infinity,
+  maxBodyLength: Infinity,
   url: 'http://localhost:3000/posts',
-  headers: { }
-};
+  headers: {}
+}
 
 const getData = async () => {
   try {
-    const  response  = await axios.request(config)
+    const response = await axios.request(config)
     datosPosts.value = response.data
     console.log(response.data)
   } catch (error) {
@@ -30,7 +30,7 @@ getData()
     <div class="info m-3">{{ datos.author }}</div>
 
     <div class="content-post">
-      <h2 class="title mb-5"> {{ datos.title }}</h2>
+      <h2 class="title mb-5">{{ datos.title }}</h2>
 
       <p class="text">{{ datos.content }}</p>
     </div>
@@ -43,6 +43,4 @@ getData()
   </div>
   <button class="btn btn-outline-primary">Enviar</button>
   </div>
-  
-
 </template>
