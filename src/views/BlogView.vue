@@ -34,5 +34,15 @@ getData()
 
       <p class="text">{{ datos.content }}</p>
     </div>
+    <div class="input-group flex-nowrap container" v-for="comentarios in datosUsername" :key="user">
+  <span class="input-group-text" id="addon-wrapping">@</span>
+  <input type="text" class="" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
   </div>
+  <div class="container mt-5">
+    <textarea name="" id="" cols="30" rows="10" placeholder="Comentario"></textarea>
+  </div>
+  <button>Enviar</button>
+  </div>
+  
+
 </template>

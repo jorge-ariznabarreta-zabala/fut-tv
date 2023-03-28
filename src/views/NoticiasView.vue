@@ -13,6 +13,8 @@ import TarjetaNoticias from '../components/TarjetaNoticias.vue';
 import tarjetaCarousel from '../components/tarjetaCarousel.vue';
 </script>
 
-<style lang="scss" scoped>
-
+<style scoped>
+a {
+    font-size: 1.5vw;
+}
 </style>
