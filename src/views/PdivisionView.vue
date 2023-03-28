@@ -28,7 +28,7 @@ getData()
     <TitlePages title="Clasificaccion" />
   </div>
   
-  <table class="table table-hover ">
+  <table class="table table-info table-striped table-hover ">
   <thead>
     <tr>
       <th scope="col">Clubes</th>
