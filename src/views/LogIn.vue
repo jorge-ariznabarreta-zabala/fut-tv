@@ -3,85 +3,73 @@ import router from '@/router'
 import axios from 'axios'
 import { ref } from 'vue'
 
-const nombre = ref('')
-const apellido = ref('')
-const correo = ref('')
-const contraseña = ref('')
-const direccion = ref('')
 
-const nuevoUsuario = async () => {
 
-  const url = 'http://localhost:3000/usuarios'
-  await fetch(url, {
-    method: 'POST',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({
-      name: nombre.value,
-      lastname: apellido.value,
-      email: correo.value,
-      password: contraseña.value,
-      address: direccion.value
-    })
-  })
+
+const useradmin = ref("")
+const password = ref("")
+
+
+
+var config = {
+  method: 'get',
+  url: 'http://localhost:3000/useradmin',
+};
+
+
+const getUserAdmin = async () => {
+  try {
+    const data = await axios.request(config)
+    useradmin.value = data.data[0].useradmin
+    password.value= data.data[0].password
+  } catch (error) {
+    console.log(" a habido un error ", error)
+  }
+}
+getUserAdmin();
+
+const formtData = ref({
+  username: '',
+  password: ''
+})
+
+
+function getDataAdmin(data) {
+    if (useradmin.value == data.username && password.value == data.password){
+    window.location.href = "/intranet"
+    } else if (useradmin.value!= data.username || password.value!= data.password){
+      alert("Usuario o contraseña incorrectos")
+    }
+    
 }
 
-
-
-
 </script>
-
 <template>
   <div class="formularioRegistro">
     <div class="formularios">
-    <FormKit
-      type="text"
-      label="Usuario"
-      name="usuario"
-      v-model="usuario"
-      validation="required|length:4"
-      validation-messages="este campo es obligatorio"
+      <FormKit type="form"
+       submit-label="Login"
+        @submit="getDataAdmin"
+        :value="formtData"
+        >
 
-    />
+        <h2 class="mb-5">Login Admin</h2>
 
-    <FormKit
-      type="text"
-      label="Nombre Completo"
-      name="nombre"
-      v-model="nombre"
-      validation="required|length:4"
-      validation-messages="este campo es obligatorio"
+      <FormKit type="text"
+       label="User Name"
+        name="username"
+        validation="required"
+        />
 
-
-    />
-
-    <FormKit
-      type="email"
-      label="Correo"
-      name="correo"
-      v-model="correo"
-      validation="required|Correo"
-      validation-messages="este campo es obligatorio"
-
-    />
-
-    <FormKit
+      <FormKit
       type="password"
-      name="Contraseña"
-      v-model="contraseña"
+      name="password"
       label="Password"
       validation="required"
-      validation-visibility="live"
-      validation-messages="este campo es obligatorio"
     />
-  
-    <FormKit 
-     type="submit"
-      label="registrarte"
-       name="enviar"
-       @click="nuevoUsuario" 
-       />
 
-  </div>
+      </FormKit>
+    </div>
   </div>
 </template>
 
@@ -93,7 +81,8 @@ const nuevoUsuario = async () => {
   flex-direction: column;
   align-items: center;
 }
-.formularios{
+
+.formularios {
   background-color: rgb(252, 250, 247);
   border: 1px solid black;
   border-radius: 10px;
