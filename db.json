@@ -19,20 +19,8 @@
       "id": 6
     }
   ],
-  "comments": [
-    {
-      "id": 1,
-      "commentId": 1,
-      "usuario": "Pepito",
-      "body": "Me encanta vuestra pagina, hacen un trabajo genial. Animo que si se puede!"
-    },
-    {
-      "usuario": "Juan Benito de Valle ",
-      "body": "muy buen trabajo!",
-      "id": 2
-    }
-  ],
-  "userAdmin": [
+  "comments": [],
+  "usuarios": [
     {
       "useradmin": "anismelow",
       "password": "qwerty123",

@@ -48,12 +48,33 @@ getName()
        const url = 'http://localhost:3000/comments';
        this.isError = false
        this.isLoading = true
-      //  let commentario = `{"usuario": ${this.nombreUsuario},"comentariobody": ${this.comentariobody}}`
-      //  console.log(commentario);
        const response = await fetch(url,{
                                  method: 'POST',
                                  headers: {'Content-Type': 'application/json'},
                                  body: `{"usuario":"${this.nombreUsuario}","body":"${this.comentariobody}"}`
+                               })
+                               .catch((e) => {
+                                console.log('****ERROR', e)
+                                this.isLoading = false
+                                this.isError = true
+                              })    
+       this.isLoading = false
+       if (!this.isError && response?.ok) {
+       } else {
+         this.isError = true
+       }
+       //recarga
+       location.reload();
+     }  
+     
+     async function deletecomentario(id) {
+       const url = `http://localhost:3000/comments/${id}`;
+       this.isError = false
+       this.isLoading = true
+       const response = await fetch(url,{
+                                 method: 'DELETE',
+                                 headers: {'Content-Type': 'application/json'}
+                                 
                                })
                                .catch((e) => {
                                 console.log('****ERROR', e)
@@ -83,6 +104,7 @@ getName()
     <div class="sacarDatos" v-for="names in datosUsuario" :key="id">
       <h5>{{ names.usuario }}</h5>
       <p>{{ names.body }}</p>
+      <i :id="names.id" class="fa-solid fa-trash mb-3" @click=" deletecomentario(names.id)"></i>
     </div>
  
   </div>
