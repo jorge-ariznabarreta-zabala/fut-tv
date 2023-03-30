@@ -19,6 +19,7 @@ var config = {
 const getUserAdmin = async () => {
   try {
     const data = await axios.request(config)
+    console.log(data.data)
     useradmin.value = data.data[0].useradmin
     password.value= data.data[0].password
   } catch (error) {
@@ -38,6 +39,7 @@ function getDataAdmin(data) {
     window.location.href = "/intranet"
     } else if (useradmin.value!= data.username || password.value!= data.password){
       alert("Usuario o contraseña incorrectos")
+      location.reload()
     }
     
 }
