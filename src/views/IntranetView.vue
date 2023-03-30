@@ -20,7 +20,7 @@ const CreatePost = async () => {
       "content": content.value
     }
   })
-   reload()
+  reload();
 }
 
 function reload() {
@@ -54,8 +54,8 @@ function reload() {
       <div class="inputs-text">
         <textarea class="rounded" name="contenido" id="contenido" cols="90" rows="10" v-model="content"></textarea>
       </div>
-      <input class="rounded btn btn-info" type="submit" name="enviar" id="enviar" @click="CreatePost" />
       </form>
+      <input class="rounded btn btn-info" type="submit" name="enviar" id="enviar" @click="CreatePost" />
   </div>
 </template>
 
