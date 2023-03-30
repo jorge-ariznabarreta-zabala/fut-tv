@@ -88,6 +88,49 @@ getName()
        }
        //recarga
        location.reload();
+     } 
+     
+
+   //editar comentario
+let comentarioId;
+    let getData2 = ref(null)
+       async function getcomentario(id) {
+        const url = `http://localhost:3000/comments/${id}`;
+
+
+      const getData = await axios.get(url)
+        getData2.value = await getData.data
+
+        console.log("data", getData2.value)
+        nombreUsuario.value=getData2.value.usuario
+        comentariobody.value=getData2.value.body
+        comentarioId=getData2.value.id
+       //recarga
+        //location.reload();
+      } 
+
+     
+     async function editarcomentario(id) {
+       const url = `http://localhost:3000/comments/${id}`;
+       this.isError = false
+       this.isLoading = true
+       const response = await fetch(url,{
+                                 method: 'PUT',
+                                 headers: {'Content-Type': 'application/json'},
+                                 body: `{"usuario":"${this.nombreUsuario}","body":"${this.comentariobody}"}`
+                               })
+                               .catch((e) => {
+                                console.log('****ERROR', e)
+                                this.isLoading = false
+                                this.isError = true
+                              })    
+       this.isLoading = false
+       if (!this.isError && response?.ok) {
+       } else {
+         this.isError = true
+       }
+       //recarga
+       location.reload();
      }    
 </script>
 
@@ -105,6 +148,7 @@ getName()
       <h5>{{ names.usuario }}</h5>
       <p>{{ names.body }}</p>
       <i :id="names.id" class="fa-solid fa-trash mb-3" @click=" deletecomentario(names.id)"></i>
+      <i :id="names.id" class="fa-solid fa-pen-to-square" @click="getcomentario(names.id)"></i>
     </div>
  
   </div>
@@ -117,7 +161,8 @@ getName()
       <textarea name="" id="" cols="28" rows="8" placeholder="Comentario" v-model="comentariobody"></textarea>
     </div>
     <div class="arreglar container mt-2">
-      <button class="btn btn-outline-primary col-sm-2 " @click="enviarComentario()">Enviar</button>
+      <button class="btn btn-outline-primary col-sm-1 " @click="enviarComentario()">Enviar</button>
+      <button class="btn btn-outline-primary col-sm-1 " @click="editarcomentario(comentarioId)">Modificar</button>
     </div>
   </div>
 </template>
