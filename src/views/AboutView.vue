@@ -7,7 +7,7 @@ import AboutComponent from '../components/AboutComponent.vue'
 <template>
   <div>
     <TitlePages title="Sobre Nosotros" />
-    <AboutComponent />
+    <AboutComponent/>
   </div>
 </template>
 
