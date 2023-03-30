@@ -1,5 +1,4 @@
 <script setup>
-import router from '@/router'
 import axios from 'axios'
 import { ref } from 'vue'
 
@@ -13,7 +12,7 @@ const password = ref("")
 
 var config = {
   method: 'get',
-  url: 'http://localhost:3000/useradmin',
+  url: 'http://localhost:3000/usuarios',
 };
 
 
@@ -43,10 +42,12 @@ function getDataAdmin(data) {
     
 }
 
+
 </script>
 <template>
   <div class="formularioRegistro">
     <div class="formularios">
+
       <FormKit type="form"
        submit-label="Login"
         @submit="getDataAdmin"
