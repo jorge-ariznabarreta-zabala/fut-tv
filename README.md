@@ -1,3 +1,8 @@
+“API fútbol”.
+
+Aplicación que toma información de una API de fútbol y nos muestra en la pantalla de inicio los partidos que se juegan en directo, los partidos del día, y nos permite elegir otros días a través de un formulario calendario. Habrá otra página con información de la clasificación de primera división y la posibilidad de implementar la segunda división, como mejora futura se contempla aportar otros datos estadísticos como goleadores, mejores asistentes, etc.
+Consta de una página about en la que hay una pequeña descripción de la empresa, e iconos que representan a los creadores, con un link a su cuenta de github, un blog en el que a través de la intranet el administrador puede subir posts y en el que el usuario puede hacer comentarios, una página de contacto, una página de intranet desde donde el administrador puede subir los posts del blog, una página de login para el administrador, una pagina de noticias que también se nutre de la api para proporcionar a noticias que se refrescan.
+
 # fut-tv
 
 This template should help get you started developing with Vue 3 in Vite.
