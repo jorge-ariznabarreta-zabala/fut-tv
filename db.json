@@ -10,9 +10,8 @@
   "comments": [],
   "usuarios": [
     {
-       "useradmin": "anismelow",
+      "useradmin": "anismelow",
       "password": "qwerty123",
-      
       "id": 1
     }
   ]
