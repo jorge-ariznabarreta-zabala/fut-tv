@@ -2,13 +2,9 @@
   <div class="mb-5">
     <TitlePages title="Partidos por Día" />
   </div>
-
-  <div>
+  <div class="tabla mt-5 container">
     <h1>Selecciona una fecha:</h1>
     <DayPicker @fecha-seleccionada="handleFechaSeleccionada" />
-    <p>Fecha seleccionada: {{ fechaSeleccionada }}</p>
-  </div>
-
   <table class="table table-info table-striped table-hover">
     <thead>
       <tr>
@@ -51,6 +47,7 @@
       </tr>
     </tbody>
   </table>
+</div>
 </template>
 
 <script setup>

@@ -4,7 +4,7 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid contenedor">
       <a class="navbar-brand" href="#"
-        ><img src="../assets/image/image_1-removebg-preview_1_50.png" alt=""
+        ><img src="../assets/image/image1.png" alt=""
       /></a>
       <button
         class="navbar-toggler"

@@ -31,6 +31,7 @@ getData()
     <TitlePages title="Partidos en Directo" />
   </div>
 
+  <div class="tabla mt-5 container">
   <table class="table table-info table-striped table-hover">
     <thead>
       <tr>
@@ -66,6 +67,7 @@ getData()
       </tr>
     </tbody>
   </table>
+  </div>
 </template>
 <style>
 table {
