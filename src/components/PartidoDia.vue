@@ -75,7 +75,7 @@ async function getData(date) {
       url: 'https://livescore6.p.rapidapi.com/matches/v2/list-by-date',
       params: { Category: 'soccer', Date: date, Timezone: '-7' },
       headers: {
-        'X-RapidAPI-Key': 'cd269c7843mshf8d04a2f30c4420p1495d4jsn0146dd168b25',
+        'X-RapidAPI-Key': '2354e7edb9mshf8c9fa220c15434p1804fajsn9793ea2f18a3',
         'X-RapidAPI-Host': 'livescore6.p.rapidapi.com'
       }
     })

@@ -36,7 +36,7 @@ const formtData = ref({
 
 function getDataAdmin(data) {
     if (useradmin.value == data.username && password.value == data.password){
-    window.location.href = "/intranet"
+    window.location.href = "http://localhost:4001/login/intranet"
     } else if (useradmin.value!= data.username || password.value!= data.password){
       alert("Usuario o contraseña incorrectos")
       location.reload()
@@ -74,6 +74,8 @@ function getDataAdmin(data) {
       </FormKit>
     </div>
   </div>
+</div>
+</div>
 </template>
 
 <style scoped>
