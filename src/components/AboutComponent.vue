@@ -67,7 +67,7 @@ Fútbol 3.0 también tiene como objetivo fomentar la colaboración entre los clu
     </div>
     <div class="card rounded-0 border-0 ">
       <img 
-        src="src/assets/Avatares/Mohammed.svg"
+        src="src/assets/Avatares/moha.png"
         class="card-img-top circular--square "
         alt="..."
       />
