@@ -4,20 +4,8 @@ import FooterComponent from '@/components/FooterComponent.vue'
 
 
  describe('TestesDeUnit', () => {
-     it('3 iconos', () => {
-         const wrapper = mount( FooterComponent );
-         const iconos = wrapper.findq('#')
-         expect(iconos).toBeTruthy()
-    });
-
-    
-
-
-
-describe('TestesDeUnit', () => {
     it('renders', () => {
         const wrapper = mount(FooterComponent)
         expect(wrapper.exists()).toBe(true)
     })
 });
- })

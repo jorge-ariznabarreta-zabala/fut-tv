@@ -7,4 +7,7 @@ describe ('tarjetaCarousel', () => {
         const wrapper = mount(tarjetaCarousel)
         expect(wrapper.find('span').exists()).toBe(true)
     })
-})
+});
+    
+  
+    

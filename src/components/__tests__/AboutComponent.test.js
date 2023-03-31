@@ -13,9 +13,9 @@ describe('AboutComponent.vue', () => {
       
         const wrapper = mount(AboutComponent, {
           props: {
-            title: "Guess User Age App",
+            title: "Mohamed",
           },
         });
-        expect(wrapper.text()).toContain("Guess User Age App");
+        expect(wrapper.text()).toContain("Mohamed");
       });
 });

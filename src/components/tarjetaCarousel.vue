@@ -30,7 +30,7 @@
       data-bs-slide="prev"
     >
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
+      <span class="visually-hidden">{{ greeting }}</span>
     </button>
     <button
       class="carousel-control-next"
@@ -44,4 +44,12 @@
   </div>
 </template>
 
-<script setup></script>
+<script>
+export default {
+  data() {
+    return {
+      greeting: "Previous"
+    }
+  }
+}
+</script>
