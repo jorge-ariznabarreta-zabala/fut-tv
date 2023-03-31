@@ -74,6 +74,8 @@ function getDataAdmin(data) {
       </FormKit>
     </div>
   </div>
+</div>
+</div>
 </template>
 
 <style scoped>
