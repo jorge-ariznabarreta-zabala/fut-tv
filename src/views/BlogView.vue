@@ -4,8 +4,10 @@ import TitlePages from '../components/TitlePages.vue'
 import { ref } from 'vue'
 
 const datosPosts = ref([])
+const datosUsuario = ref([])
 const comentariobody = ref([])
 const nombreUsuario = ref([])
+
 
 var config = {
   method: 'get',
@@ -25,7 +27,6 @@ const getData = async () => {
 }
 getData()
 
-const datosUsuario = ref([])
 
 var config = {
   method: 'get',
@@ -43,49 +44,29 @@ const getName = async () => {
     console.log(error)
   }
 }
-getName()                       
+getName()   
+
+//ENVIAR COMENTARIOS
+
   async function enviarComentario() {
        const url = 'http://localhost:3000/comments';
-       this.isError = false
-       this.isLoading = true
        const response = await fetch(url,{
                                  method: 'POST',
                                  headers: {'Content-Type': 'application/json'},
                                  body: `{"usuario":"${this.nombreUsuario}","body":"${this.comentariobody}"}`
                                })
-                               .catch((e) => {
-                                console.log('****ERROR', e)
-                                this.isLoading = false
-                                this.isError = true
-                              })    
-       this.isLoading = false
-       if (!this.isError && response?.ok) {
-       } else {
-         this.isError = true
-       }
        //recarga
        location.reload();
      }  
      
+     //DELETE COMENTARIO
+     
      async function deletecomentario(id) {
        const url = `http://localhost:3000/comments/${id}`;
-       this.isError = false
-       this.isLoading = true
        const response = await fetch(url,{
                                  method: 'DELETE',
                                  headers: {'Content-Type': 'application/json'}
-                                 
                                })
-                               .catch((e) => {
-                                console.log('****ERROR', e)
-                                this.isLoading = false
-                                this.isError = true
-                              })    
-       this.isLoading = false
-       if (!this.isError && response?.ok) {
-       } else {
-         this.isError = true
-       }
        //recarga
        location.reload();
      } 
@@ -112,23 +93,12 @@ let comentarioId;
      
      async function editarcomentario(id) {
        const url = `http://localhost:3000/comments/${id}`;
-       this.isError = false
-       this.isLoading = true
        const response = await fetch(url,{
                                  method: 'PUT',
                                  headers: {'Content-Type': 'application/json'},
                                  body: `{"usuario":"${this.nombreUsuario}","body":"${this.comentariobody}"}`
                                })
-                               .catch((e) => {
-                                console.log('****ERROR', e)
-                                this.isLoading = false
-                                this.isError = true
-                              })    
-       this.isLoading = false
-       if (!this.isError && response?.ok) {
-       } else {
-         this.isError = true
-       }
+
        //recarga
        location.reload();
      }    
@@ -147,19 +117,11 @@ let comentarioId;
   <div class="input-group container d-flex flex-wrap">
 
     <span class="input-group-text " id="addon-wrapping">@</span>
-
     <input type="text" class="rounded" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping" v-model="nombreUsuario">
-
     <textarea class="w-100 mt-4 rounded" cols="28" rows="8" placeholder="Comentario" v-model="comentariobody"></textarea>
-
     <button class="btn btn-outline-primary mt-3  rounded" @click="enviarComentario()">Enviar</button>
-
     <button class="btn btn-outline-primary mt-3  rounded ms-3 " @click="editarcomentario(comentarioId)">Modificar</button>
 
-
-
-
-    
   </div>
 
 
@@ -173,7 +135,7 @@ let comentarioId;
 
     <i :id="names.id" class="fa-solid fa-pen-to-square" @click="getcomentario(names.id)"></i>
 </div>
-    <h7 class="border rounded px-4 mb-3 w-10 text-center">{{ names.usuario }}</h7>
+    <h6 class="border rounded px-4 mb-3 w-10 text-center">{{ names.usuario }}</h6>
     <p class="border rounded  ">{{ names.body }}</p>
 
 
