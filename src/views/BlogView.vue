@@ -135,34 +135,59 @@ let comentarioId;
 </script>
 
 <template>
-  <TitlePages title="Blog" />
-  <div class="post container" v-for="datos in datosPosts" :key="id">
-    <div class="info ">{{ datos.author }}</div>
-
-    <div class="content-post">
-      <h2 class="title mb-5">{{ datos.title }}</h2>
-
-      <p class="text">{{ datos.content }}</p>
-    </div>
-    <div class="sacarDatos" v-for="names in datosUsuario" :key="id">
-      <h5>{{ names.usuario }}</h5>
-      <p>{{ names.body }}</p>
-      <i :id="names.id" class="fa-solid fa-trash mb-3" @click=" deletecomentario(names.id)"></i>
-      <i :id="names.id" class="fa-solid fa-pen-to-square" @click="getcomentario(names.id)"></i>
-    </div>
- 
+  <TitlePages title="Blog"  class="mb-5"/>
+  <div class="post container  rounded p-4" v-for="datos in datosPosts" :key="id">
+    <h5 class="info mb-2">autor del post {{ datos.author }}</h5>
+    <h2 class="content-post mb-5">{{ datos.title }}</h2>
+    <p class="text"> {{ datos.content }}</p>
   </div>
-  <div class="contenedor">
-    <div class="input-group flex-nowrap container" >
-      <span class="input-group-text" id="addon-wrapping">@</span>
-      <input type="text" class="" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping" v-model="nombreUsuario">
-    </div>
-    <div class="container mt-5">
-      <textarea name="" id="" cols="28" rows="8" placeholder="Comentario" v-model="comentariobody"></textarea>
-    </div>
-    <div class="arreglar container mt-2">
-      <button class="btn btn-outline-primary col-sm-1 " @click="enviarComentario()">Enviar</button>
-      <button class="btn btn-outline-primary col-sm-1 " @click="editarcomentario(comentarioId)">Modificar</button>
-    </div>
+
+  <h3 class="mt-3 text-center">Agregar comentario</h3>
+
+  <div class="input-group container d-flex flex-wrap">
+
+    <span class="input-group-text " id="addon-wrapping">@</span>
+
+    <input type="text" class="rounded" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping" v-model="nombreUsuario">
+
+    <textarea class="w-100 mt-4 rounded" cols="28" rows="8" placeholder="Comentario" v-model="comentariobody"></textarea>
+
+    <button class="btn btn-outline-primary mt-3  rounded" @click="enviarComentario()">Enviar</button>
+
+    <button class="btn btn-outline-primary mt-3  rounded ms-3 " @click="editarcomentario(comentarioId)">Modificar</button>
+
+
+
+
+    
   </div>
+
+
+
+  <h3 class="mt-5 text-center ">Comentarios</h3>
+
+  <div class="mostrarDatos rounded p-3 container mt-5 mb-5 d-flex flex-column " v-for="names in datosUsuario" :key="id">
+    <div class="botones  d-flex justify-content-end">
+
+    <i :id="names.id" class="fa-solid fa-trash mb-3 mx-2" @click=" deletecomentario(names.id)"></i>
+
+    <i :id="names.id" class="fa-solid fa-pen-to-square" @click="getcomentario(names.id)"></i>
+</div>
+    <h7 class="border rounded px-4 mb-3 w-10 text-center">{{ names.usuario }}</h7>
+    <p class="border rounded  ">{{ names.body }}</p>
+
+
+  </div>
+
+  
 </template>
+
+<style scoped>
+ .post{
+  border: 2px solid gray;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; }
+
+  .mostrarDatos{
+  border: 2px solid gray;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; }
+</style>
