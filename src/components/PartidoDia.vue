@@ -2,12 +2,13 @@
   <div class="mb-5">
     <TitlePages title="Partidos por Día" />
   </div>
-  <input
-    type="date"
-    id="fecha"
-    v-model="fechaSeleccionada"
-    @change="cambiarFecha($event.target.value)"
-  />
+
+  <div>
+    <h1>Selecciona una fecha:</h1>
+    <DayPicker @fecha-seleccionada="handleFechaSeleccionada" />
+    <p>Fecha seleccionada: {{ fechaSeleccionada }}</p>
+  </div>
+
   <table class="table table-info table-striped table-hover">
     <thead>
       <tr>
@@ -54,50 +55,42 @@
 
 <script setup>
 import TitlePages from '../components/TitlePages.vue'
+import DayPicker from '../components/DayPicker.vue'
 import axios from 'axios'
 import { ref, onMounted } from 'vue'
 
+const fechaSeleccionada = ref('')
+const handleFechaSeleccionada = (fecha) => {
+  fechaSeleccionada.value = fecha
+  getData(fecha)
+}
 const listaPartidosDay = ref([])
-let fechaSeleccionada = ref(new Date())
-console.log(fechaSeleccionada.value)
 
-let year = fechaSeleccionada.value.getFullYear()
-let month = (fechaSeleccionada.value.getMonth() + 1).toString().padStart(2, '0')
-let day = fechaSeleccionada.value.getDate().toString().padStart(2, '0')
-let fechaFormateada = year + month + day
-console.log(fechaFormateada)
 
-async function getData(date) {
-  try {
-    console.log(date)
-    const { data } = await axios.request({
-      method: 'GET',
-      url: 'https://livescore6.p.rapidapi.com/matches/v2/list-by-date',
-      params: { Category: 'soccer', Date: date, Timezone: '-7' },
-      headers: {
-        'X-RapidAPI-Key': '2354e7edb9mshf8c9fa220c15434p1804fajsn9793ea2f18a3',
-        'X-RapidAPI-Host': 'livescore6.p.rapidapi.com'
-      }
-    })
-    listaPartidosDay.value = data.Stages
-    console.log(listaPartidosDay)
-  } catch (error) {
-    console.error(error)
-  }
-}
+ async function getData(date) {
+   try {
+     console.log(date)
+     const { data } = await axios.request({
+       method: 'GET',
+       url: 'https://livescore6.p.rapidapi.com/matches/v2/list-by-date',
+       params: { Category: 'soccer', Date: date, Timezone: '-7' },
+       headers: {
+         'X-RapidAPI-Key': '2354e7edb9mshf8c9fa220c15434p1804fajsn9793ea2f18a3',
+         'X-RapidAPI-Host': 'livescore6.p.rapidapi.com'
+       }
+     })
+     listaPartidosDay.value = data.Stages
+     console.log(listaPartidosDay.value)
+   } catch (error) {
+     console.error(error)
+   }
+ }
 
-function cambiarFecha(date) {
-  if (date) {
-    console.log(date)
-    fechaFormateada = date.replace(/-/g, '') // reemplaza todos los guiones por una cadena vacía
-    console.log(fechaFormateada)
-    getData(fechaFormateada)
-  }
-}
 
-onMounted(() => {
-  getData(fechaFormateada)
-})
+
+ onMounted(() => {
+   getData(new Date())
+ })
 </script>
 <style>
 table {
