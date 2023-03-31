@@ -151,7 +151,7 @@ h5{
  .card-integrantes{
  width: 30%;
 margin-bottom: 2rem;
- }
+  }
 
 }
 </style>
