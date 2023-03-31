@@ -65,11 +65,7 @@ const props = defineProps({
     </div>
     <div class="card rounded-0 border-0 ">
       <img 
-<<<<<<< HEAD
         src="src/assets/Avatares/Mohammed.svg"
-=======
-        src="src/assets/Avatares/Moha.png"
->>>>>>> f122da5c5d5da877b1ae6e068e3e856dbfac02da
         class="card-img-top circular--square "
         alt="..."
       />
