@@ -65,12 +65,12 @@ const props = defineProps({
     </div>
     <div class="card rounded-0 border-0 ">
       <img 
-        src="src/assets/Avatares/Mohammed1.png"
+        src="src/assets/Avatares/Mohammed.svg"
         class="card-img-top circular--square "
         alt="..."
       />
       <div class="card-body">
-        <h5 class="card-title text-center">{{ props.title }}</h5>
+        <h5 class="card-title text-center">{{props.title}}</h5>
         <p class="card-text"></p>
       </div>
       <div class="card-footer text-center">
