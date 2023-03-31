@@ -1,11 +1,7 @@
 <script setup>
-import { reactive } from "vue";
-const props = defineProps({
-  title: {
-    type: String,
-    default: "Mohamed",
-  },
-});
+const props =({
+  title: "Mohamed" 
+})
 </script>
 <template>
   <div class="card mb-4 m-3 p-2 container m-auto" >
