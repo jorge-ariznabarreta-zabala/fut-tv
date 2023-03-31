@@ -65,7 +65,7 @@ const props = defineProps({
     </div>
     <div class="card rounded-0 border-0 ">
       <img 
-        src="src/assets/Avatares/Mohammed1.png"
+        src="src/assets/Avatares/Mohammed.svg"
         class="card-img-top circular--square "
         alt="..."
       />
