@@ -38,7 +38,7 @@ const primerLink = 'https://www.livescore.com'
 let callApiNews = {
   url: 'https://livescore6.p.rapidapi.com/news/v2/list',
   headers: {
-    'X-RapidAPI-Key': 'e388957e0cmshc456c83001b76b4p144d44jsn9e6c090f0124'
+    'X-RapidAPI-Key': '2354e7edb9mshf8c9fa220c15434p1804fajsn9793ea2f18a3'
   }
 }
 const noticias = ref([])

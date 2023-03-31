@@ -40,7 +40,7 @@ const router = createRouter({
       component: () => import('../views/BlogView.vue')
     },
     {
-      path: '/intranet',
+      path: '/login/intranet',
       name: 'intranetview',
       component: () => import('../views/IntranetView.vue')
     }
