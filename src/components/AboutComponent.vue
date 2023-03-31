@@ -8,12 +8,12 @@ const props = defineProps({
 });
 </script>
 <template>
-  <div class="card mb-4 m-3 p-2 container m-auto" >
+  <div class="card mb-4 m-3 p-2 container m-auto " >
     
       <div class="w-75 mx-auto">
         <img
-          src="src/assets/image/football3.jpg"
-          class="img-fluid rounded-start p-2 mt-4git"
+          src="src/assets/image/Sin título.png"
+          class="img-fluid rounded-4 p-2 mt-4"
           alt="..."
         />
       </div>
@@ -38,8 +38,8 @@ Fútbol 3.0 también tiene como objetivo fomentar la colaboración entre los clu
 
   <!-- Avatares about us -->
   <!-- <div class="container-card"> -->
-  <div class="d-flex container-fluid  mb-5">
-    <div class="card rounded-0 border-0">
+  <div class=" cardteam d-flex container-fluid  mb-5 ">
+    <div class="card-integrantes rounded-0 border-0">
       <img src="src/assets/Avatares/Jorge.svg" class="card-img-top circular--square" alt="..." />
       <div class="card-body">
         <h5 class="card-title text-center">Jorge</h5>
@@ -54,7 +54,7 @@ Fútbol 3.0 también tiene como objetivo fomentar la colaboración entre los clu
         <small class="text-muted"></small>
       </div>
     </div>
-    <div class="card rounded-0 border-0">
+    <div class="card-integrantes rounded-0 border-0">
       <img src="src/assets/Avatares/Juan.svg" class="card-img-top circular--square" alt="..." />
       <div class="card-body">
         <h5 class="card-title text-center">Juan</h5>
@@ -65,7 +65,7 @@ Fútbol 3.0 también tiene como objetivo fomentar la colaboración entre los clu
         <small class="text-muted"></small>
       </div>
     </div>
-    <div class="card rounded-0 border-0 ">
+    <div class="card-integrantes rounded-0 border-0 ">
       <img 
         src="src/assets/Avatares/moha.png"
         class="card-img-top circular--square "
@@ -81,7 +81,7 @@ Fútbol 3.0 también tiene como objetivo fomentar la colaboración entre los clu
       </div>
     </div>
 
-    <div class="card rounded-0 border-0">
+    <div class="card-integrantes rounded-0 border-0">
       <img src="src/assets/Avatares/Jesus.svg" class="card-img-top circular--square" alt="..." />
       <div class="card-body">
         <h5 class="card-title text-center">Jesus</h5>
@@ -91,7 +91,7 @@ Fútbol 3.0 también tiene como objetivo fomentar la colaboración entre los clu
         <a href="https://github.com/ikatza1967" class="card-link text-decoration-none">Github</a>
       </div>
     </div>
-    <div class="card rounded-0 border-0">
+    <div class="card-integrantes rounded-0 border-0">
       <img src="src/assets/Avatares/Mihai.svg" class="card-img-top circular--square" alt="..." />
       <div class="card-body">
         <h5 class="card-title text-center">Mihai</h5>
@@ -102,7 +102,7 @@ Fútbol 3.0 también tiene como objetivo fomentar la colaboración entre los clu
         <small class="text-muted"></small>
       </div>
     </div>
-    <div class="card rounded-0 border-0">
+    <div class="card-integrantes rounded-0 border-0">
       <img src="src/assets/Avatares/Anyell.svg" class="card-img-top circular--square" alt="..." />
       <div class="card-body">
         <h5 class="card-title text-center">Anyell</h5>
@@ -133,25 +133,25 @@ Fútbol 3.0 también tiene como objetivo fomentar la colaboración entre los clu
   border-bottom-left-radius: 50% 50%;
 }
 
-img {
- 
-  justify-content: center;
-  padding: 1rem;
-}
-.a {
-  text-decoration-color: none;
-  color: #3a5e65;
-}
-.balon {
-  width: 30rem;
-  margin-bottom: 5rem;
-}
-.football {
-  box-shadow: #acd6d4;
-  width: 2000px;
-  height: 10rem;
-}
+
 h5{
   font-size: 2vw;
+}
+
+  
+
+
+ @media (max-width: 570px) {
+
+   .cardteam{
+     flex-wrap: wrap;
+    justify-content: center;
+   }
+
+ .card-integrantes{
+ width: 30%;
+margin-bottom: 2rem;
+ }
+
 }
 </style>
