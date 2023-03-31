@@ -149,4 +149,7 @@ img {
   width: 2000px;
   height: 10rem;
 }
+h5{
+  font-size: 2vw;
+}
 </style>

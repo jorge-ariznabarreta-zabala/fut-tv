@@ -6,7 +6,7 @@ import FooterComponent from '@/components/FooterComponent.vue'
  describe('TestesDeUnit', () => {
      it('3 iconos', () => {
          const wrapper = mount( FooterComponent );
-         const iconos = wrapper.findq('#')
+         const iconos = wrapper.findqAll('#iconos')
          expect(iconos).toBeTruthy()
     });
 
