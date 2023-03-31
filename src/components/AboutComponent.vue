@@ -21,13 +21,15 @@ const props = defineProps({
         <div class="card-body">
           <h5 class="card-title"></h5>
           <p class="card-text text-justify mt-4">
-            Somos una pequeña empresa de programadores, que quiere darse a conocer con esta pagina
-            web, dando una pequeña muestra de nuestro valor. Lorem ipsum dolor sit, amet consectetur
-            adipisicing elit. Odit, similique aut voluptas nemo est inventore. Saepe est impedit ut
-            corporis nam ipsa optio necessitatibus, doloremque numquam in officiis, quis quos.
-            Quisquam voluptatem cum odio incidunt in, dolores esse, libero unde tenetur excepturi
-            consectetur necessitatibus nisi et. Dolorem soluta molestias assumenda enim error cum
-            sed, nisi .
+            En los últimos años, el fútbol se ha convertido en uno de los deportes más populares del mundo, con millones de aficionados en todos los rincones del planeta. En este contexto, ha surgido una nueva startup de fútbol que busca revolucionar la forma en que se juega, se entrena y se disfruta el deporte rey.
+
+La startup en cuestión se llama "Fútbol 3.0" y su objetivo es crear una plataforma que permita a los jugadores, entrenadores, clubes y aficionados conectarse y mejorar su experiencia de fútbol. La idea principal detrás de Fútbol 3.0 es utilizar tecnologías de vanguardia para mejorar el rendimiento y la formación de los jugadores, así como para crear una comunidad de fútbol global.
+
+Uno de los principales servicios ofrecidos por Fútbol 3.0 es su sistema de análisis de datos en tiempo real. Utilizando tecnologías de inteligencia artificial y aprendizaje automático, la plataforma es capaz de recopilar datos sobre el rendimiento de los jugadores durante los partidos y los entrenamientos. Estos datos son analizados y utilizados para proporcionar información valiosa sobre los puntos fuertes y débiles de los jugadores, así como para identificar áreas en las que se pueden realizar mejoras.
+
+Otro servicio ofrecido por Fútbol 3.0 es su plataforma de formación en línea. Utilizando herramientas de videoconferencia y tutoría en línea, los jugadores pueden acceder a entrenadores y expertos de fútbol de todo el mundo. Estos entrenadores y expertos pueden proporcionar consejos y orientación personalizados a los jugadores, ayudándoles a mejorar su juego y a alcanzar sus objetivos.
+
+Fútbol 3.0 también tiene como objetivo fomentar la colaboración entre los clubes y los jugadores. A través de su plataforma, los clubes pueden buscar y reclutar jugadores de todo el mundo, y los jugadores pueden buscar y solicitar oportunidades de prueba en diferentes clubes. Esto significa que los jugadores talentosos tienen la oportunidad de ser descubiertos y reclutados por clubes de élite, independientemente de su ubicación geográfica.
           </p>
         </div>
       </div>
@@ -65,7 +67,7 @@ const props = defineProps({
     </div>
     <div class="card rounded-0 border-0 ">
       <img 
-        src="src/assets/Avatares/Mohammed.svg"
+        src="src/assets/Avatares/moha.png"
         class="card-img-top circular--square "
         alt="..."
       />
