@@ -8,5 +8,6 @@ import About from './components/AboutComponent.vue'
 <template>
   <NavBar />
   <RouterView />
-  <Footer />
+  <Footer /> 
+
 </template>
