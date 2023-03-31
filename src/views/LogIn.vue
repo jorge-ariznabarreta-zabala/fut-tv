@@ -1,109 +1,96 @@
 <script setup>
-import router from "@/router";
-import axios from "axios";
+import axios from 'axios'
 import { ref } from 'vue'
 
- const  nombre = ref('');
- const  apellido  = ref('');
- const  correo  = ref('');
- const  contraseña  = ref('');
- const  direccion  = ref('');
 
 
 
+const useradmin = ref("")
+const password = ref("")
 
-const nuevoUsuario = async () => {
-  const url = 'http://localhost:3000/usuarios'
-   await fetch(url, {
-    method: 'POST',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify({
-      name: nombre.value,
-      lastname: apellido.value,
-      email: correo.value,
-      password: contraseña.value,
-      address: direccion.value
-    })
-  })
-}
 
-function redirectToPage() {
-  router.push('/')
 
-  nuevoUsuario()
-  validateForm()
-}
+var config = {
+  method: 'get',
+  url: 'http://localhost:3000/usuarios',
+};
 
-function validateForm() {
-  var name = document.getElementById('name').value
-  if (name == '') {
-    document.querySelector('.status').innerHTML = alert('Name cannot be empty')
-    return false
+
+const getUserAdmin = async () => {
+  try {
+    const data = await axios.request(config)
+    console.log(data.data)
+    useradmin.value = data.data[0].useradmin
+    password.value= data.data[0].password
+  } catch (error) {
+    console.log(" a habido un error ", error)
   }
-  var email = document.getElementById('email').value
-  if (email == '') {
-    document.querySelector('.status').innerHTML = alert('Email cannot be empty')
-    return false
-  } else {
-    var re =
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    if (!re.test(email)) {
-      document.querySelector('.status').innerHTML = alert('Email format invalid')
-      return false
+}
+getUserAdmin();
+
+const formtData = ref({
+  username: '',
+  password: ''
+})
+
+
+function getDataAdmin(data) {
+    if (useradmin.value == data.username && password.value == data.password){
+    window.location.href = "/intranet"
+    } else if (useradmin.value!= data.username || password.value!= data.password){
+      alert("Usuario o contraseña incorrectos")
+      location.reload()
     }
-  }
-  var subject = document.getElementById('subject').value
-  if (subject == '') {
-    document.querySelector('.status').innerHTML = alert('Subject cannot be empty')
-    return false
-  }
-  var message = document.getElementById('message').value
-  if (message == '') {
-    document.querySelector('.status').innerHTML = alert('Message cannot be empty')
-    return false
-  }
-  document.querySelector('.status').innerHTML = alert('Sending...')
+    
 }
+
+
 </script>
-
 <template>
-<div class="col-lg-8 mx-auto ">
+  <div class="formularioRegistro">
+    <div class="formularios">
 
-<div id="containerRegister">
-  <div class=" datospersonales bd-exampledropdown-menu mx-auto form-color col-lg-7 col-md-8 m-5" >
-    <form class="px-5 py-3 needs-validation "  id="formulario2">
-      <h3 class="text-center pb-3">Registro</h3>
-      <div class="mb-3 ">
-          <label for="DropdownFormName1" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="name" v-model="nombre">
-      </div>
-      <div class="mb-3">
-          <label for="DropdownFormlastname" class="form-label">Apellido</label>
-          <input type="text" class="form-control" id="lastname" v-model="apellido">
-      </div>
-      <div class="mb-3">
-          <label for="DropdownFormdirection" class="form-label">Direccion</label>
-          <input type="text" class="form-control" id="address" v-model="direccion">
-      </div>
-      <div class="mb-3">
-        <label for="DropdownFormEmail1" class="form-label">Correo Electronico</label>
-        <input type="email" class="form-control" id="email" v-model="correo">
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Contraseña</label>
-        <input type="email" class="form-control" id="password" v-model="contraseña">
-      </div>
-      <div class="mb-3 d-grid gap-2 col-6 mx-auto">
-        <button class="btn btn-outline-primary" @click="redirectToPage()">Registrate</button>
-      </div>
-    </form>
+      <FormKit type="form"
+       submit-label="Login"
+        @submit="getDataAdmin"
+        :value="formtData"
+        >
+
+        <h2 class="mb-5">Login Admin</h2>
+
+      <FormKit type="text"
+       label="User Name"
+        name="username"
+        validation="required"
+        />
+
+      <FormKit
+      type="password"
+      name="password"
+      label="Password"
+      validation="required"
+    />
+
+      </FormKit>
+    </div>
   </div>
 </div>
 </div>
 </template>
 
 <style scoped>
-#containerRegister {
+.formularioRegistro {
+  padding: 5rem 0;
   background-color: #acd6d4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formularios {
+  background-color: rgb(252, 250, 247);
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 6rem;
 }
 </style>

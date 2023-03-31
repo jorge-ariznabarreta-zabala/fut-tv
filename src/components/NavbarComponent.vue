@@ -20,7 +20,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent ">
         <ul class="navbar-nav mb-2 mb-lg-0 d-flex me-5">
           <li class="nav-item">
-            <RouterLink to="/" class="nav-link">Home</RouterLink>
+            <RouterLink to="/" class="nav-link">Inicio</RouterLink>
           </li>
           <li class="nav-item">
             <RouterLink to="/Noticias" class="nav-link">Noticias</RouterLink>
@@ -45,13 +45,10 @@
             </ul>
           </li>
           <li class="nav-item">
-            <RouterLink to="/About" class="nav-link">About</RouterLink>
+            <RouterLink to="/About" class="nav-link">Sobre Nosotros</RouterLink>
           </li>
           <li class="nav-item">
             <RouterLink to="/Contact" class="nav-link d">Contacto</RouterLink>
-          </li>
-          <li class="nav-item">
-            <RouterLink to="/LogIn" class="nav-link">Log In</RouterLink>
           </li>
           <li class="nav-item">
             <RouterLink to="/BlogView" class="nav-link">Blog</RouterLink>

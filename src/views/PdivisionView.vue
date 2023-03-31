@@ -24,10 +24,10 @@ const getData = async () => {
 getData()
 </script>
 <template>
-  <div class="mb-5">
+  
     <TitlePages title="Clasificaccion" />
-  </div>
-
+ 
+<div class="tabla mt-5 container">
   <table class="table table-info table-striped table-hover">
     <thead>
       <tr>
@@ -63,4 +63,5 @@ getData()
       </tr>
     </tbody>
   </table>
+</div>
 </template>

@@ -1,13 +1,11 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
-import NavbarComponent from '@/components/NavbarComponent.vue'
+import FooterComponent from '@/components/FooterComponent.vue'
 
 
 describe('TestesDeUnit', () => {
     it('renders', () => {
-        const wrapper = mount(NavbarComponent)
+        const wrapper = mount(FooterComponent)
         expect(wrapper.exists()).toBe(true)
     })
 });
-
-
