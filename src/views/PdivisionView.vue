@@ -4,13 +4,13 @@ import TitlePages from '../components/TitlePages.vue'
 import axios from 'axios'
 import { ref } from 'vue'
 
+const equiposLiga = ref([])
 let callApiSoccer = {
   url: 'https://livescore6.p.rapidapi.com/leagues/v2/get-table?Category=soccer&Ccd=spain&Scd=laliga-santander',
   headers: {
     'X-RapidAPI-Key': '714442dd51msh83097c2755da9a1p1efd32jsnecc4f48508ab'
   }
 }
-const equiposLiga = ref([])
 
 const getData = async () => {
   try {

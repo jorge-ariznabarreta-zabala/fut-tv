@@ -34,6 +34,7 @@ import TarjetaNoticias from '../components/TarjetaNoticias.vue'
 
 
 const primerLink = 'https://www.livescore.com'
+const noticias = ref([])
 
 let callApiNews = {
   url: 'https://livescore6.p.rapidapi.com/news/v2/list',
@@ -41,7 +42,6 @@ let callApiNews = {
     'X-RapidAPI-Key': '714442dd51msh83097c2755da9a1p1efd32jsnecc4f48508ab'
   }
 }
-const noticias = ref([])
 
 const getInfo = async () => {
   try {

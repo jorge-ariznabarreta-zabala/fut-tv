@@ -4,6 +4,7 @@ import TitlePages from '../components/TitlePages.vue'
 import axios from 'axios'
 import { ref } from 'vue'
 
+const listaPartidosLive = ref([])
 let callApiSoccer = {
   url: 'https://livescore6.p.rapidapi.com/matches/v2/list-live',
   params: { category: 'soccer', Timezone: '-7' },
@@ -12,7 +13,6 @@ let callApiSoccer = {
     'X-RapidAPI-Host': 'livescore6.p.rapidapi.com'
   }
 }
-const listaPartidosLive = ref([])
 
 async function getData() {
   try {
