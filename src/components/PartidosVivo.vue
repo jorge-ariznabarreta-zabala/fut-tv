@@ -8,7 +8,7 @@ let callApiSoccer = {
   url: 'https://livescore6.p.rapidapi.com/matches/v2/list-live',
   params: { category: 'soccer', Timezone: '-7' },
   headers: {
-    'X-RapidAPI-Key': '2354e7edb9mshf8c9fa220c15434p1804fajsn9793ea2f18a3',
+    'X-RapidAPI-Key': '714442dd51msh83097c2755da9a1p1efd32jsnecc4f48508ab',
     'X-RapidAPI-Host': 'livescore6.p.rapidapi.com'
   }
 }
