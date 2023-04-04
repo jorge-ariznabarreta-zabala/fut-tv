@@ -20,18 +20,18 @@
       <tbody>
         <tr v-for="partidoDay in listaPartidosDay" :key="partidoDay.Id">
           <!-- Agregado :key -->
-          <td class="text-center align-middle">
-            <span>{{ partidoDay.Events[0].T1[0].Nm }}
+          <td class="text-center align-middle justify-content-between">
+            <span class="col-8 p-1">{{ partidoDay.Events[0].T1[0].Nm }}</span>
               <img :src="`https://lsm-static-prod.livescore.com/medium/${partidoDay.Events[0].T1[0].Img}`"
-                class="me-5 ms-3" v-bind:alt="partidoDay.Events[0].T1[0].Img" /></span>
+                class="col-4 p-1" v-bind:alt="partidoDay.Events[0].T1[0].Img" />
           </td>
           <td class="text-center align-middle">
             {{ partidoDay.Events[0].Tr1 }} - {{ partidoDay.Events[0].Tr2 }}
           </td>
           <td class="text-center align-middle">
-            <span><img :src="`https://lsm-static-prod.livescore.com/medium/${partidoDay.Events[0].T2[0].Img}`"
-                class="me-5 ms-3" :alt="partidoDay.Events[0].T2[0].Img" />
-              {{ partidoDay.Events[0].T2[0].Nm }}</span>
+            <img :src="`https://lsm-static-prod.livescore.com/medium/${partidoDay.Events[0].T2[0].Img}`"
+            class="col-4 p-1" :alt="partidoDay.Events[0].T2[0].Img" />
+              <span class="col-8 p-1">{{ partidoDay.Events[0].T2[0].Nm }}</span>
           </td>
           <td class="text-center align-middle">{{ partidoDay.CompN }}</td>
           <td class="text-center align-middle">{{ partidoDay.Snm }}</td>
@@ -59,14 +59,16 @@ const handleFechaSeleccionada = async (fecha) => {
 </script>
 <style>
 table {
-  font-size: 1.5vw;
-  table-layout: auto;
+  font-size: 1.vw;
+  /* table-layout: auto; */
 }
 
 td>img {
   max-width: 25%;
 }
-
+td {
+  max-height: 1vw;
+}
 span {
   display: inline-flex;
   align-items: center;

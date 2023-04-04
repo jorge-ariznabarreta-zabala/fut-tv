@@ -3,7 +3,7 @@
 
 import axios from 'axios';
 
-const apiKey= '714442dd51msh83097c2755da9a1p1efd32jsnecc4f48508ab'
+const apiKey= '12fb15aa56msh54e342963c87a57p1171a0jsn6e6a33319e80'
 const apiHost= 'livescore6.p.rapidapi.com'
 async function getListByDate(date) {
     try {
