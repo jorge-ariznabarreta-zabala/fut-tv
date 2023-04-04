@@ -1,5 +1,20 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import { useUserStore } from '../stores/user'
+
+
+
+const requireAuth = async(to, from, next )=>{
+  const userStore = useUserStore()
+
+   const user = await userStore.CurrentUser()
+
+   if(user){
+    next()
+   }else {
+    next('/registro')
+   }
+}
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -30,19 +45,25 @@ const router = createRouter({
       component: () => import('../views/PdivisionView.vue')
     },
     {
-      path: '/LogIn',
-      name: 'LogIn',
-      component: () => import('../views/LogIn.vue')
-    },
-    {
       path: '/BlogView',
       name: 'BlogView',
       component: () => import('../views/BlogView.vue')
     },
     {
-      path: '/login/intranet',
+      path: '/LogIn',
+      name: 'LogIn',
+      component: () => import('../views/LogIn.vue')
+    },
+    {
+      path: '/registro',
+      name: 'Registro',
+      component: () =>import('../views/RegistroView.vue')
+    },
+    {
+      path: '/intranet',
       name: 'intranetview',
-      component: () => import('../views/IntranetView.vue')
+      component: () => import('../views/IntranetView.vue'),
+      beforeEnter:requireAuth
     }
   ]
 })

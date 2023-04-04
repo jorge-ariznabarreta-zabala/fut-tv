@@ -1,7 +1,12 @@
 <script setup>
+import { useUserStore } from '../stores/user';
 import TitlePages from '../components/TitlePages.vue'
 import { ref } from 'vue'
 import axios from 'axios'
+
+const userStore = useUserStore()
+
+// crear post y publicar, con axios y async await
 
 const title = ref('')
 const author = ref('')
@@ -31,6 +36,9 @@ function reload() {
 }
 
 
+
+
+
 </script>
 
 <template>
@@ -39,6 +47,7 @@ function reload() {
 
   <div class="intranet">
     <h2 class="my-5 text-center">postea en el blog</h2>
+    <button @click="userStore.logOutUser">Cerrar sesión</button>
 
 
     <form class="form" action="">
@@ -55,7 +64,8 @@ function reload() {
         <textarea class="rounded" name="contenido" id="contenido" cols="90" rows="10" v-model="content"></textarea>
       </div>
       </form>
-      <input class="rounded btn btn-info" type="submit" name="enviar" id="enviar" @click="CreatePost" />
+      <button @click="CreatePost">Crear Post</button>
+
   </div>
 </template>
 

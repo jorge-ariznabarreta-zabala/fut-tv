@@ -16,8 +16,8 @@ const handlerSubmit = async () => {
     return alert("rellena los campos");
     }
 
-   await userStore.loginUser(email.value, password.value);
-    // router.push('/intranet')
+   await userStore.registerUser(email.value, password.value);
+    // router.push('/')
 }
 
 
@@ -26,14 +26,14 @@ const handlerSubmit = async () => {
 
 
 <template>
-    <div class="Login">
+    <div class="registro">
         <h2 class="mb-5">Registrate</h2>
 
         <form @submit.prevent="handlerSubmit">
           <input type="email" placeholder="email" v-model.trim ="email">
 
           <input type="password" placeholder="password" v-model.trim ="password">
-          <button class="btn btn-primary bg-danger" type="submit" :disabled="userStore.loadingUser">acceso</button>
+          <button type="submit">Crear usuario</button>
           </form>
 
   </div>
