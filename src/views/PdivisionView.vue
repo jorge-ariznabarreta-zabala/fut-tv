@@ -1,28 +1,31 @@
 <script setup>
 import TitlePages from '../components/TitlePages.vue'
 
-import axios from 'axios'
+//import axios from 'axios'
 import { ref, onMounted } from 'vue'
 import info from '../assets/modulos/livescoreAPI';
 
-const equiposLiga = ref([])
-let callApiSoccer = {
-  url: 'https://livescore6.p.rapidapi.com/leagues/v2/get-table?Category=soccer&Ccd=spain&Scd=laliga-santander',
-  headers: {
-    'X-RapidAPI-Key': '714442dd51msh83097c2755da9a1p1efd32jsnecc4f48508ab'
-  }
-}
+const equiposLiga = ref(onMounted(async () => {
+  equiposLiga.value = await info.getTableLeague()
+  console.log(equiposLiga);
+}));
+// let callApiSoccer = {
+//   url: 'https://livescore6.p.rapidapi.com/leagues/v2/get-table?Category=soccer&Ccd=spain&Scd=laliga-santander',
+//   headers: {
+//     'X-RapidAPI-Key': '714442dd51msh83097c2755da9a1p1efd32jsnecc4f48508ab'
+//   }
+// }
 
-const getData = async () => {
-  try {
-    const { data } = await axios.request(callApiSoccer)
-    console.log(data.LeagueTable.L[0].Tables[0].team)
-    equiposLiga.value = data.LeagueTable.L[0].Tables[0].team
-  } catch (error) {
-    console.log(error)
-  }
-}
-getData()
+// const getData = async () => {
+//   try {
+//     const { data } = await axios.request(callApiSoccer)
+//     console.log(data.LeagueTable.L[0].Tables[0].team)
+//     equiposLiga.value = data.LeagueTable.L[0].Tables[0].team
+//   } catch (error) {
+//     console.log(error)
+//   }
+// }
+// getData()
 </script>
 <template>
   
