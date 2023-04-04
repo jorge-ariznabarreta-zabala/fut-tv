@@ -1,30 +1,11 @@
 <script setup>
 import TitlePages from '../components/TitlePages.vue'
-
-import axios from 'axios'
-import { ref } from 'vue'
-
-const listaPartidosLive = ref([])
-let callApiSoccer = {
-  url: 'https://livescore6.p.rapidapi.com/matches/v2/list-live',
-  params: { category: 'soccer', Timezone: '-7' },
-  headers: {
-    'X-RapidAPI-Key': '714442dd51msh83097c2755da9a1p1efd32jsnecc4f48508ab',
-    'X-RapidAPI-Host': 'livescore6.p.rapidapi.com'
-  }
-}
-
-async function getData() {
-  try {
-    const { data } = await axios.request(callApiSoccer)
-    //console.log(data.Stages);
-    listaPartidosLive.value = data.Stages
-    //console.log(listaPartidosLive.value);
-  } catch (error) {
-    console.error(error)
-  }
-}
-getData()
+import { ref, onMounted } from 'vue'
+import info from '../assets/modulos/livescoreAPI';
+let listaPartidosLive = ref(onMounted(async () => {
+  listaPartidosLive.value = await info.getListLive()
+  console.log(listaPartidosLive);
+}));
 </script>
 <template>
   <div class="mb-5">

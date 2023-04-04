@@ -10,11 +10,11 @@ async function getListByDate(date) {
       //console.log(date)
       const { data } = await axios.request({
         method: 'GET',
-        url: `https://${this.apiHost}/matches/v2/list-by-date`,
+        url: `https://${apiHost}/matches/v2/list-by-date`,
         params: { Category: 'soccer', Date: date, Timezone: '-7' },
         headers: {
-          'X-RapidAPI-Key': this.apiKey,
-          'X-RapidAPI-Host': this.apiHost}
+          'X-RapidAPI-Key': apiKey,
+          'X-RapidAPI-Host': apiHost}
       })
       //console.log(data.Stages);
       return data.Stages
@@ -24,7 +24,7 @@ async function getListByDate(date) {
   }
 
   
-  async function getListLive(apiKey, apiHost) {
+  async function getListLive() {
     try {
       const { data } = await axios.request({method: 'GET',
       url: `https://${apiHost}/matches/v2/list-live`,
@@ -40,7 +40,7 @@ async function getListByDate(date) {
     }
   }
 
-  async function getNewsList(apiKey, apiHost) {
+  async function getNewsList() {
     try {
       const { data } = await axios.request({
         url: `https://${apiHost}/news/v2/list`,
@@ -56,7 +56,7 @@ async function getListByDate(date) {
   }
  
   
-  async function getTableLeague(apiKey, apiHost)  {
+  async function getTableLeague()  {
     try {
       const { data } = await axios.request({
         url: `https://${apiHost}/leagues/v2/get-table?Category=soccer&Ccd=spain&Scd=laliga-santander`,
@@ -75,7 +75,5 @@ async function getListByDate(date) {
     getListByDate,
     getListLive,
     getNewsList,
-    getTableLeague,
-    apiKey,
-    apiHost
+    getTableLeague
   }
