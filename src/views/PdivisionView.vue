@@ -2,7 +2,8 @@
 import TitlePages from '../components/TitlePages.vue'
 
 import axios from 'axios'
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
+import info from '../assets/modulos/livescoreAPI';
 
 const equiposLiga = ref([])
 let callApiSoccer = {
