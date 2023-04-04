@@ -17,9 +17,9 @@ const props =({
         <div class="card-body">
           <h5 class="card-title"></h5>
           <p class="card-text text-justify mt-4">
-            En los últimos años, el fútbol se ha convertido en uno de los deportes más populares del mundo, con millones de aficionados en todos los rincones del planeta. En este contexto, ha surgido una nueva startup de fútbol que busca revolucionar la forma en que se juega, se entrena y se disfruta el deporte rey.
+           <!-- En los últimos años, el fútbol se ha convertido en uno de los deportes más populares del mundo, con millones de aficionados en todos los rincones del planeta. En este contexto, ha surgido una nueva startup de fútbol que busca revolucionar la forma en que se juega, se entrena y se disfruta el deporte rey.
 
-<!-- La startup en cuestión se llama "Fut-tv" y su objetivo es crear una plataforma que permita a los aficionados conectarse y mejorar su experiencia de fútbol. La idea principal detrás de Fut-tv es utilizar tecnologías de vanguardia para crear una comunidad de fútbol global.
+ La startup en cuestión se llama "Fut-tv" y su objetivo es crear una plataforma que permita a los aficionados conectarse y mejorar su experiencia de fútbol. La idea principal detrás de Fut-tv es utilizar tecnologías de vanguardia para crear una comunidad de fútbol global.
 
 Uno de los principales servicios ofrecidos por Fut-tv es su sistema de muestra de partidos en vivo, proximos, así seleccionarlos para una fecha . Utilizando tecnologías de inteligencia artificial y aprendizaje automático, la plataforma es capaz de recopilar datos sobre el rendimiento de los jugadores durante los partidos y los entrenamientos. Estos datos son analizados y utilizados para proporcionar información valiosa sobre los puntos fuertes y débiles de los jugadores, así como para identificar áreas en las que se pueden realizar mejoras.
 
