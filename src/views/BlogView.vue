@@ -9,7 +9,7 @@ const comentariobody = ref([])
 const nombreUsuario = ref([])
 
 
-var config = {
+var configPost = {
   method: 'get',
   maxBodyLength: Infinity,
   url: 'http://localhost:3000/posts',
@@ -18,7 +18,7 @@ var config = {
 
 const getData = async () => {
   try {
-    const response = await axios.request(config)
+    const response = await axios.request(configPost)
     datosPosts.value = response.data
     console.log(response.data)
   } catch (error) {
