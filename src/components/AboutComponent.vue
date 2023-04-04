@@ -26,7 +26,7 @@ Uno de los principales servicios ofrecidos por Fut-tv es su sistema de muestra d
 Otro servicio ofrecido por Fut-tv es su plataforma de formación en línea. Utilizando herramientas de videoconferencia y tutoría en línea, los jugadores pueden acceder a entrenadores y expertos de fútbol de todo el mundo. Estos entrenadores y expertos pueden proporcionar consejos y orientación personalizados a los jugadores, ayudándoles a mejorar su juego y a alcanzar sus objetivos.
 
 Fut-tv también tiene como objetivo fomentar la colaboración entre los clubes y los jugadores. A través de su plataforma, los clubes pueden buscar y reclutar jugadores de todo el mundo, y los jugadores pueden buscar y solicitar oportunidades de prueba en diferentes clubes. Esto significa que los jugadores talentosos tienen la oportunidad de ser descubiertos y reclutados por clubes de élite, independientemente de su ubicación geográfica. -->
-Somos una pequeña empresa creada por desarrolladores web que tiene como objetivo presentar información de una forma dinámica a los aficionados al fútbol. Ofrecemos información sobre partidos en directo, horarios de partidos, noticias deportivas, y un blog donde los usuarios pueden hacer comentarios.
+Somos una pequeña empresa creada por desarrolladores web que tiene como objetivo presentar información de una forma dinámica a los aficionados al fútbol. Ofrecemos información sobre partidos en directo, horarios de partidos, noticias deportivas y un blog donde los usuarios pueden hacer comentarios.
 
 
           </p>
