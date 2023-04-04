@@ -8,17 +8,17 @@ const datosUsuario = ref([])
 const comentariobody = ref([])
 const nombreUsuario = ref([])
 
+//----------------------------MOSTRAR POST ADMIN------------------------------------
 
-var config = {
+var configPost = {
   method: 'get',
-  maxBodyLength: Infinity,
   url: 'http://localhost:3000/posts',
   headers: {}
 }
 
 const getData = async () => {
   try {
-    const response = await axios.request(config)
+    const response = await axios.request(configPost)
     datosPosts.value = response.data
     console.log(response.data)
   } catch (error) {
@@ -27,10 +27,10 @@ const getData = async () => {
 }
 getData()
 
-
+//---------------------------FIN ADMIN--------------------------------------
+ 
 var config = {
   method: 'get',
-  maxBodyLength: Infinity,
   url: 'http://localhost:3000/comments',
   headers: {}
 }
@@ -44,68 +44,68 @@ const getName = async () => {
     console.log(error)
   }
 }
-getName()   
+getName()
 
 //ENVIAR COMENTARIOS
 
-  async function enviarComentario() {
-       const url = 'http://localhost:3000/comments';
-       const response = await fetch(url,{
-                                 method: 'POST',
-                                 headers: {'Content-Type': 'application/json'},
-                                 body: `{"usuario":"${this.nombreUsuario}","body":"${this.comentariobody}"}`
-                               })
-       //recarga
-       location.reload();
-     }  
-     
-     //DELETE COMENTARIO
-     
-     async function deletecomentario(id) {
-       const url = `http://localhost:3000/comments/${id}`;
-       const response = await fetch(url,{
-                                 method: 'DELETE',
-                                 headers: {'Content-Type': 'application/json'}
-                               })
-       //recarga
-       location.reload();
-     } 
-     
+async function enviarComentario() {
+  const url = 'http://localhost:3000/comments';
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: `{"usuario":"${this.nombreUsuario}","body":"${this.comentariobody}"}`
+  })
+  //recarga
+  location.reload();
+}
 
-   //editar comentario
+//DELETE COMENTARIO
+
+async function deletecomentario(id) {
+  const url = `http://localhost:3000/comments/${id}`;
+  const response = await fetch(url, {
+    method: 'DELETE',
+    headers: { 'Content-Type': 'application/json' }
+  })
+  //recarga
+  location.reload();
+}
+
+
+//editar comentario
 let comentarioId;
-    let getData2 = ref(null)
-       async function getcomentario(id) {
-        const url = `http://localhost:3000/comments/${id}`;
+let getData2 = ref(null)
+async function getcomentario(id) {
+  const url = `http://localhost:3000/comments/${id}`;
 
 
-      const getData = await axios.get(url)
-        getData2.value = await getData.data
+  const getData = await axios.get(url)
+  getData2.value = await getData.data
 
-        console.log("data", getData2.value)
-        nombreUsuario.value=getData2.value.usuario
-        comentariobody.value=getData2.value.body
-        comentarioId=getData2.value.id
-       //recarga
-        //location.reload();
-      } 
+  console.log("data", getData2.value)
+  nombreUsuario.value = getData2.value.usuario
+  comentariobody.value = getData2.value.body
+  comentarioId = getData2.value.id
+  //recarga
+  //location.reload();
+}
 
-     
-     async function editarcomentario(id) {
-       const url = `http://localhost:3000/comments/${id}`;
-       const response = await fetch(url,{
-                                 method: 'PUT',
-                                 headers: {'Content-Type': 'application/json'},
-                                 body: `{"usuario":"${this.nombreUsuario}","body":"${this.comentariobody}"}`
-                               })
 
-       //recarga
-       location.reload();
-     }    
+async function editarcomentario(id) {
+  const url = `http://localhost:3000/comments/${id}`;
+  const response = await fetch(url, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: `{"usuario":"${this.nombreUsuario}","body":"${this.comentariobody}"}`
+  })
+
+  //recarga
+  location.reload();
+}    
 </script>
 
 <template>
-  <TitlePages title="Blog"  class="mb-5"/>
+  <TitlePages title="Blog" class="mb-5" />
   <div class="post container  rounded p-4" v-for="datos in datosPosts" :key="id">
     <h5 class="info mb-2">autor del post {{ datos.author }}</h5>
     <h2 class="content-post mb-5">{{ datos.title }}</h2>
@@ -117,7 +117,8 @@ let comentarioId;
   <div class="input-group container d-flex flex-wrap">
 
     <span class="input-group-text " id="addon-wrapping">@</span>
-    <input type="text" class="rounded" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping" v-model="nombreUsuario">
+    <input type="text" class="rounded" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping"
+      v-model="nombreUsuario">
     <textarea class="w-100 mt-4 rounded" cols="28" rows="8" placeholder="Comentario" v-model="comentariobody"></textarea>
     <button class="btn btn-outline-primary mt-3  rounded" @click="enviarComentario()">Enviar</button>
     <button class="btn btn-outline-primary mt-3  rounded ms-3 " @click="editarcomentario(comentarioId)">Modificar</button>
@@ -131,25 +132,26 @@ let comentarioId;
   <div class="mostrarDatos rounded p-3 container mt-5 mb-5 d-flex flex-column " v-for="names in datosUsuario" :key="id">
     <div class="botones  d-flex justify-content-end">
 
-    <i :id="names.id" class="fa-solid fa-trash mb-3 mx-2" @click=" deletecomentario(names.id)"></i>
+      <i :id="names.id" class="fa-solid fa-trash mb-3 mx-2" @click="deletecomentario(names.id)"></i>
 
     <i :id="names.id" class="fa-solid fa-pen-to-square" @click="getcomentario(names.id)"></i>
+    
 </div>
     <h6 class="border rounded px-4 mb-3 w-10 text-center">{{ names.usuario }}</h6>
     <p class="border rounded  ">{{ names.body }}</p>
 
 
   </div>
-
-  
 </template>
 
 <style scoped>
- .post{
+.post {
   border: 2px solid gray;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; }
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 
-  .mostrarDatos{
+.mostrarDatos {
   border: 2px solid gray;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; }
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 </style>

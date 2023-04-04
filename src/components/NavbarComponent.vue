@@ -6,7 +6,6 @@ import { RouterLink } from 'vue-router';
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <div class="cerrarsesion">
-       <router-link to="/logIn">Login admin</router-link>
       </div>
       <a class="navbar-brand" href="#"><img src="../assets/image/image1.png" alt="" /></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -44,6 +43,9 @@ import { RouterLink } from 'vue-router';
           </li>
           <li class="nav-item">
             <RouterLink to="/BlogView" class="nav-link">Blog</RouterLink>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" to="/logIn">Login admin</router-link>
           </li>
         </ul>
         
