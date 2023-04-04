@@ -8,10 +8,10 @@ const datosUsuario = ref([])
 const comentariobody = ref([])
 const nombreUsuario = ref([])
 
+//----------------------------MOSTRAR POST ADMIN------------------------------------
 
 var config = {
   method: 'get',
-  maxBodyLength: Infinity,
   url: 'http://localhost:3000/posts',
   headers: {}
 }
@@ -27,10 +27,10 @@ const getData = async () => {
 }
 getData()
 
-
+//---------------------------FIN ADMIN--------------------------------------
+ 
 var config = {
   method: 'get',
-  maxBodyLength: Infinity,
   url: 'http://localhost:3000/comments',
   headers: {}
 }
@@ -59,7 +59,7 @@ getName()
        location.reload();
      }  
      
-     //DELETE COMENTARIO
+//DELETE COMENTARIO
      
      async function deletecomentario(id) {
        const url = `http://localhost:3000/comments/${id}`;
@@ -72,23 +72,21 @@ getName()
      } 
      
 
-   //editar comentario
-let comentarioId;
-    let getData2 = ref(null)
-       async function getcomentario(id) {
-        const url = `http://localhost:3000/comments/${id}`;
+//EDITAR COMENTARIO
+  let comentarioId;
+      let getData2 = ref(null)
+        async function getcomentario(id) {
+          const url = `http://localhost:3000/comments/${id}`;
 
 
-      const getData = await axios.get(url)
-        getData2.value = await getData.data
+        const getData = await axios.get(url)
+          getData2.value = await getData.data
 
-        console.log("data", getData2.value)
-        nombreUsuario.value=getData2.value.usuario
-        comentariobody.value=getData2.value.body
-        comentarioId=getData2.value.id
-       //recarga
-        //location.reload();
-      } 
+          console.log("data", getData2.value)
+          nombreUsuario.value=getData2.value.usuario
+          comentariobody.value=getData2.value.body
+          comentarioId=getData2.value.id
+        } 
 
      
      async function editarcomentario(id) {
@@ -134,6 +132,7 @@ let comentarioId;
     <i :id="names.id" class="fa-solid fa-trash mb-3 mx-2" @click=" deletecomentario(names.id)"></i>
 
     <i :id="names.id" class="fa-solid fa-pen-to-square" @click="getcomentario(names.id)"></i>
+    
 </div>
     <h6 class="border rounded px-4 mb-3 w-10 text-center">{{ names.usuario }}</h6>
     <p class="border rounded  ">{{ names.body }}</p>
