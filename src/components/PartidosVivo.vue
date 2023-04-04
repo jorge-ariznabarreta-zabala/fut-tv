@@ -48,14 +48,15 @@ let listaPartidosLive = ref(onMounted(async () => {
     </table>
   </div>
 </template>
-<style>
+<style scoped>
 table {
-  font-size: 0.5rem;
+  font-size: 0.75rem;
   table-layout: auto;
 }
 
-td>img {
-  max-width: 25%;
+img {
+  max-width: 1vw;
+  height: auto;
 }
 
 th td {

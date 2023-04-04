@@ -57,7 +57,7 @@ const handleFechaSeleccionada = async (fecha) => {
   listaPartidosDay.value = await info.getListByDate(fecha)
 };
 </script>
-<style>
+<style scoped>
 table {
   font-size: 1.vw;
   /* table-layout: auto; */
