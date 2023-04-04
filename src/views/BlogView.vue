@@ -8,10 +8,10 @@ const datosUsuario = ref([])
 const comentariobody = ref([])
 const nombreUsuario = ref([])
 
+//----------------------------MOSTRAR POST ADMIN------------------------------------
 
 var configPost = {
   method: 'get',
-  maxBodyLength: Infinity,
   url: 'http://localhost:3000/posts',
   headers: {}
 }
@@ -27,10 +27,10 @@ const getData = async () => {
 }
 getData()
 
-
+//---------------------------FIN ADMIN--------------------------------------
+ 
 var config = {
   method: 'get',
-  maxBodyLength: Infinity,
   url: 'http://localhost:3000/comments',
   headers: {}
 }
@@ -134,8 +134,9 @@ async function editarcomentario(id) {
 
       <i :id="names.id" class="fa-solid fa-trash mb-3 mx-2" @click="deletecomentario(names.id)"></i>
 
-      <i :id="names.id" class="fa-solid fa-pen-to-square" @click="getcomentario(names.id)"></i>
-    </div>
+    <i :id="names.id" class="fa-solid fa-pen-to-square" @click="getcomentario(names.id)"></i>
+    
+</div>
     <h6 class="border rounded px-4 mb-3 w-10 text-center">{{ names.usuario }}</h6>
     <p class="border rounded  ">{{ names.body }}</p>
 
