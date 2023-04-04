@@ -1,6 +1,5 @@
 <script setup>
 import TitlePages from '../components/TitlePages.vue'
-
 //import axios from 'axios'
 import { ref, onMounted } from 'vue'
 import info from '../assets/modulos/livescoreAPI';
