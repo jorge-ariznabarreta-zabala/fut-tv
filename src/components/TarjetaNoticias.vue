@@ -18,32 +18,36 @@
 </template>
 
 <script setup>
-import axios from 'axios'
-import { ref } from 'vue'
-import TitlePages from '../components/TitlePages.vue'
-import TarjetaNoticias from '../components/TarjetaNoticias.vue'
-
+//import axios from 'axios'
+import { ref, onMounted } from 'vue'
+//import TitlePages from '../components/TitlePages.vue'
+//import TarjetaNoticias from '../components/TarjetaNoticias.vue'
+import info from '../assets/modulos/livescoreAPI';
+console.log(info);
 
 const primerLink = 'https://www.livescore.com'
-const noticias = ref([])
+const noticias = ref(onMounted(async () => {
+  noticias.value = await info.getNewsList()
+  console.log(noticias);
+}));
 
-let callApiNews = {
-  url: 'https://livescore6.p.rapidapi.com/news/v2/list',
-  headers: {
-    'X-RapidAPI-Key': '714442dd51msh83097c2755da9a1p1efd32jsnecc4f48508ab'
-  }
-}
+// let callApiNews = {
+//   url: 'https://livescore6.p.rapidapi.com/news/v2/list',
+//   headers: {
+//     'X-RapidAPI-Key': '714442dd51msh83097c2755da9a1p1efd32jsnecc4f48508ab'
+//   }
+// }
 
-const getInfo = async () => {
-  try {
-    const { data } = await axios.request(callApiNews)
-    console.log(data.topStories)
-    noticias.value = data.topStories
-  } catch (error) {
-    console.log(error)
-  }
-}
-getInfo()
+// const getInfo = async () => {
+//   try {
+//     const { data } = await axios.request(callApiNews)
+//     console.log(data.topStories)
+//     noticias.value = data.topStories
+//   } catch (error) {
+//     console.log(error)
+//   }
+// }
+// getInfo()
 </script>
 
 <style lang="scss" scoped>
