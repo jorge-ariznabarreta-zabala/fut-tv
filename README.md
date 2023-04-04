@@ -51,6 +51,6 @@ npm run test:unit
 ```sh
 npm run lint
 ```
-Construido con: Visual Studio Code, HTML5, CSS3, BOOTSTRAP, SASS, VUE, Vite, Vitest, Jest.
+Construido con: Visual Studio Code, HTML5, CSS3, BOOTSTRAP, SASS, VUE, Vite, Vitest, Postman, Firebase, Jest y Pinia.
 
 Creado por: Jorge Ariznavarreta (https://github.com/jorge-ariznabarreta-zabala), Juan Benito de Valle (https://github.com/Juan-Little), Mohamed El Ibrahimi (https://github.com/Medibra322), Anyell MEndoza (https://github.com/anyellpenascal), Mihai Cocea (https://github.com/mihaicce), Jesus Pinto (https://github.com/ikatza1967)
