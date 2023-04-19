@@ -5,7 +5,7 @@
       &#169; Football All rights reserved 2023
     </div>
     <div class="redes-container d-flex justify-content-sm-end pe-5 gap-3 w-100 pb-3 mt-3">
-      <img id="icono" src="src/assets/iconos/2175193.png" alt="twiter" />
+      <img id="icono" src="../assets/iconos/2175193.png" alt="twiter" />
       <img id="icono" src="../assets/iconos/739244.png" alt="instagram" />
       <img id="icono" src="../assets/iconos/25347.png" alt="facebook" />
     </div>

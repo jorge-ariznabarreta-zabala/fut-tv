@@ -8,7 +8,7 @@ const props =({
     
       <div class="w-75 mx-auto">
         <img
-          src="src/assets/image/Sin título.png"
+          src="../assets/image/Sintitulo.png"
           class="img-fluid rounded-4 p-2 mt-4"
           alt="..."
         />
@@ -39,7 +39,7 @@ Somos una pequeña empresa creada por desarrolladores web que tiene como objetiv
   <!-- <div class="container-card"> -->
   <div class=" cardteam d-flex container-fluid  mb-5 ">
     <div class="card-integrantes rounded-0 border-0">
-      <img src="src/assets/Avatares/Jorge.svg" class="card-img-top circular--square" alt="..." />
+      <img src="../assets/Avatares/Jorge.svg" class="card-img-top circular--square" alt="..." />
       <div class="card-body">
         <h5 class="card-title text-center">Jorge</h5>
         <p class="card-text"></p>
@@ -54,7 +54,7 @@ Somos una pequeña empresa creada por desarrolladores web que tiene como objetiv
       </div>
     </div>
     <div class="card-integrantes rounded-0 border-0">
-      <img src="src/assets/Avatares/Juan.svg" class="card-img-top circular--square" alt="..." />
+      <img src="../assets/Avatares/Juan.svg" class="card-img-top circular--square" alt="..." />
       <div class="card-body">
         <h5 class="card-title text-center">Juan</h5>
         <p class="card-text"></p>
@@ -66,7 +66,7 @@ Somos una pequeña empresa creada por desarrolladores web que tiene como objetiv
     </div>
     <div class="card-integrantes rounded-0 border-0 ">
       <img 
-        src="src/assets/Avatares/moha.png"
+        src="../assets/Avatares/moha.png"
         class="card-img-top circular--square "
         alt="..."
       />
@@ -81,7 +81,7 @@ Somos una pequeña empresa creada por desarrolladores web que tiene como objetiv
     </div>
 
     <div class="card-integrantes rounded-0 border-0">
-      <img src="src/assets/Avatares/Jesus.svg" class="card-img-top circular--square" alt="..." />
+      <img src="../assets/Avatares/Jesus.svg" class="card-img-top circular--square" alt="..." />
       <div class="card-body">
         <h5 class="card-title text-center">Jesus</h5>
         <p class="card-text"></p>
@@ -91,7 +91,7 @@ Somos una pequeña empresa creada por desarrolladores web que tiene como objetiv
       </div>
     </div>
     <div class="card-integrantes rounded-0 border-0">
-      <img src="src/assets/Avatares/Mihai.svg" class="card-img-top circular--square" alt="..." />
+      <img src="../assets/Avatares/Mihai.svg" class="card-img-top circular--square" alt="..." />
       <div class="card-body">
         <h5 class="card-title text-center">Mihai</h5>
         <p class="card-text"></p>
@@ -102,7 +102,7 @@ Somos una pequeña empresa creada por desarrolladores web que tiene como objetiv
       </div>
     </div>
     <div class="card-integrantes rounded-0 border-0">
-      <img src="src/assets/Avatares/Anyell.svg" class="card-img-top circular--square" alt="..." />
+      <img src="../assets/Avatares/Anyell.svg" class="card-img-top circular--square" alt="..." />
       <div class="card-body">
         <h5 class="card-title text-center">Anyell</h5>
         <p class="card-text"></p>
