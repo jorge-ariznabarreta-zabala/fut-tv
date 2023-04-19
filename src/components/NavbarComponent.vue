@@ -7,7 +7,7 @@ import { RouterLink } from 'vue-router';
     <div class="container-fluid">
       <div class="cerrarsesion">
       </div>
-      <a class="navbar-brand" href="#"><img src="../assets/image/image1.png" alt="" /></a>
+      <RouterLink to="/" class="nav-link"><a class="navbar-brand" href="#"><img src="../assets/image/image1.png" alt="" /></a></RouterLink>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
